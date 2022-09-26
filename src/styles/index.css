@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --bg-color_100: #F9FAFB;
   --bg-color_200: #EEEEEE;
@@ -20,13 +13,20 @@
   line-height: 24px;
   font-weight: 400;
 
-  color-scheme: dark light;
+  color-scheme: light dark;
 
   font-synthesis: none; 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body > .page {
@@ -61,7 +61,7 @@ body > .page > nav > ul > div.flex > li {
 body > .page > nav > ul .item-navbar {
   color: var(--text-color_100);
   text-decoration: none;
-  
+  font-size: 1.1em;
 }
 
 body > .page > nav > ul > div.flex > input {
@@ -81,7 +81,6 @@ body > .page > nav > ul > div.flex > label.change-color {
   transform: scale(0.9);
 }
 
-
 body > .page > nav > ul > div.flex > label.change-color > .ball {
   width: 1.4rem;
   height: 1.4rem;
@@ -97,5 +96,5 @@ body > .page > nav > ul > div.flex > label.change-color > .ball {
 
 body > .page > nav > ul > div.flex > input:checked + 
 label.change-color > .ball {
-  transform: translateX(2rem);
+  transform: translateX(2.1rem);
 }

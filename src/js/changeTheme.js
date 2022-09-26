@@ -18,11 +18,14 @@ const changeTheme = (theme) => {
 };
 
 const getThemeLocalStorage = localStorage.getItem('theme');
-getThemeLocalStorage === 'light' ? 
-  changeTheme(lightTheme) : 
-  changeTheme(darkTheme);
-
 const inputCheck = document.querySelector('input#theme');
+
+if (getThemeLocalStorage === 'light') {
+  changeTheme(lightTheme)
+} else {
+  inputCheck.checked = true;
+  changeTheme(darkTheme)
+};
 
 inputCheck.addEventListener('change', () => {
   const isChecked = inputCheck.checked;
