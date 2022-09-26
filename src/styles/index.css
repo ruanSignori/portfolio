@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color_100: #F9FAFB;
+  --bg-color_200: #EEEEEE;
+  --bg-color_300: #E5E7EB;
+  --text-color_100: #374151;
+  --text-color_200: #1F2937;
+
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: dark light;
+
+  font-synthesis: none; 
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body > .page {
+  flex: 1;
+  height: 100vh;
+  background-color: var(--bg-color_100);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+body > .page > nav > ul {
+  width: 100%; 
+  padding: 3rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style: none;
+}
+
+body > .page > nav > ul > div.flex {
+  justify-content: space-between;
+}
+
+body > .page > nav > ul > div.flex > li {
+  margin: 0 2rem;
+}
+
+body > .page > nav > ul .item-navbar {
+  color: var(--text-color_100);
+  text-decoration: none;
+  
+}
+
+body > .page > nav > ul > div.flex > input {
+  display: none;
+}
+
+body > .page > nav > ul > div.flex > label.change-color {
+  width: 3.8rem;
+  height: 1.9rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  background-color: var(--text-color_100);
+  padding: 0.3rem;
+  position: relative;
+  justify-content: space-between;
+
+  transform: scale(0.9);
+}
+
+
+body > .page > nav > ul > div.flex > label.change-color > .ball {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: var(--bg-color_100);
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+
+  transform: translateX(0px);
+  transition: transform 0.2s ease-in-out;
+}
+
+body > .page > nav > ul > div.flex > input:checked + 
+label.change-color > .ball {
+  transform: translateX(2rem);
+}

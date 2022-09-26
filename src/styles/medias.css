@@ -1,0 +1,5 @@
+@media (max-width: 1024px) {
+  body > .page > nav > ul {
+    padding: 2rem 5rem;
+  }
+}

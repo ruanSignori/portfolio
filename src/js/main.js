@@ -1,1 +1,5 @@
-import '../styles/style.css';
+import './changeTheme';
+
+import '../styles/index.css';
+import '../styles/medias.css';
+
