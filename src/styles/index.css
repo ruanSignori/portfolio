@@ -30,9 +30,9 @@
 }
 
 body > .page {
-  flex: 1;
   height: 100vh;
   background-color: var(--bg-color_100);
+  transition: background ease 0.2s;
 }
 
 .flex {
@@ -40,40 +40,46 @@ body > .page {
   align-items: center;
 }
 
-body > .page > nav > ul {
+body > .page > nav {
   width: 100%; 
   padding: 3rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  list-style: none;
 }
 
-body > .page > nav > ul > div.flex {
+.page > nav > div.flex {
   justify-content: space-between;
 }
 
-body > .page > nav > ul > div.flex > li {
-  margin: 0 2rem;
-}
-
-body > .page > nav > ul .item-navbar {
+.page > nav .item-navbar {
   color: var(--text-color_100);
   text-decoration: none;
   font-size: 1.1em;
 }
 
-body > .page > nav > ul > div.flex > input {
+.page > nav > div > a {
+  margin: 0 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.page > nav > div.content-navbar > .context-switch > .text-label,
+.page > nav > div.content-navbar > .context-switch > input {
   display: none;
 }
 
-body > .page > nav > ul > div.flex > label.change-color {
+.page > nav > div.onVisibility {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+.page > nav > div.content-navbar > .context-switch > label.change-color {
   width: 3.8rem;
   height: 1.9rem;
   border-radius: 3rem;
   cursor: pointer;
-  background-color: var(--text-color_100);
+  background-color: var(--text-color_200);
   padding: 0.3rem;
   position: relative;
   justify-content: space-between;
@@ -81,7 +87,7 @@ body > .page > nav > ul > div.flex > label.change-color {
   transform: scale(0.9);
 }
 
-body > .page > nav > ul > div.flex > label.change-color > .ball {
+.page > nav > div.content-navbar > .context-switch > label.change-color > .ball {
   width: 1.4rem;
   height: 1.4rem;
   background-color: var(--bg-color_100);
@@ -94,7 +100,20 @@ body > .page > nav > ul > div.flex > label.change-color > .ball {
   transition: transform 0.2s ease-in-out;
 }
 
-body > .page > nav > ul > div.flex > input:checked + 
+.page > nav > div.content-navbar > .context-switch > input:checked + 
 label.change-color > .ball {
   transform: translateX(2.1rem);
+}
+
+.page > nav button.menu {
+  display: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.page > nav button.menu .line-menu{
+  margin: 8px;
+  background-color: var(--text-color_100);
+  width: 1.5rem;
+  height: 0.2rem;
 }

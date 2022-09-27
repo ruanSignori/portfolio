@@ -1,5 +1,51 @@
 @media (max-width: 1024px) {
-  body > .page > nav > ul {
+  body > .page > nav {
     padding: 2rem 5rem;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .page > nav {
+    padding: 1rem 2rem !important;
+  }
+
+  body > .page > nav > div {
+    position: absolute;
+    right: 0;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 8vh;
+    opacity: 0;
+    transition: opacity ease 0.2s;
+  }
+
+  body > .page > nav > div a {
+    margin: 3rem 0;
+  }
+
+  body > .page > nav > div > .context-switch {
+    width: 70%;
+    height: 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg-color_200);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  body > .page > nav > div > .context-switch > .text-label {
+    display: block !important;
+    color: var(--text-color_100);
+  }
+
+  body > .page > nav > button.menu {
+    display: block;
   }
 }
