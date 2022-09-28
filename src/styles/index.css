@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@700 & display=swap');
+@font-face {
+  font-family: "Poppins_regular";
+  src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins_bold";
+  src: url(../assets/fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+}
 
 :root {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  --font-regular: Poppins_regular, Arial, sans-serif;
+  --font-bold: Poppins_bold, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -25,10 +35,12 @@
 .page {
   background-color: var(--bg-color_100);
   transition: background-color ease 0.2s;
+  font-family: var(--font-regular);
 }
 
 .page#app {
     height: 100vh;
+    border: 2px solid red;
 }
 
 .flex {
@@ -77,6 +89,8 @@
 .page > nav > div.onVisibility {
   display: flex !important;
   opacity: 1 !important;
+  height: 100vh !important;
+  background-color: var(--bg-color_100) !important;
 }
 
 .page > nav > div.content-navbar > .context-switch > label.change-color {
@@ -128,18 +142,32 @@ label.change-color > .ball {
 }
 
 .page > article.container {
-  width: 100%;
-  height: calc(100vh - 5rem);
-  
   display: flex;
+  align-items: center;
   flex-direction: row;
   justify-content: space-between;
   padding: 5rem 10rem;
 }
 
 .page > article.container .title {
-  font-size: 4em;
-  font-weight: 700;
+  font-size: 3.5em;
+  font-family: var(--font-bold);
   max-width: 70%;
-  line-height: 6rem;
+  line-height: 4rem;
+  color: var(--text-color_100);
+}
+
+.page > article.container .subtitle {
+  color: var(--text-color_200);
+  width: 40%;
+  font-size: 1.2em;
+  margin: 2rem 0;
+  line-height: 2rem;
+}
+
+.button {
+  padding: 0.2rem 2rem;
+  background-color: var(--text-color_100);
+  color: var(--bg-color_100);
+  border-radius: 0.3rem;
 }
