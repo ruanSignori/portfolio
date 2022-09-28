@@ -16,7 +16,9 @@ buttonOpenMenu.addEventListener('click', () => {
 
   if (modal.classList.contains('onVisibility')) {
     bodyElement.style.overflowX = 'hidden'
+    console.log(bodyElement)
   } else {
-    bodyElement.style.removeProperty('overflow-x')
+    bodyElement.style.removeProperty('overflow-x');
+    console.log(bodyElement)
   }
 })

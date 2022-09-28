@@ -1,12 +1,7 @@
-@media (min-width: 1024) {
-  .page > nav {
-    
-  }
-}
-
 @media (max-width: 1024px) {
   .page > nav {
     padding: 2rem 5rem;
+    position: initial;
   }
 }
 

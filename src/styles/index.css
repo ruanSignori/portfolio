@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@700 & display=swap');
 
 :root {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -24,9 +23,12 @@
 }
 
 .page {
-  height: 100vh;
   background-color: var(--bg-color_100);
   transition: background-color ease 0.2s;
+}
+
+.page#app {
+    height: 100vh;
 }
 
 .flex {
@@ -44,7 +46,8 @@
 
   backdrop-filter: saturate(50%) blur(8px);
   background: var(--bg-color-transparent);
-  position: fixed;
+  position: sticky;
+  top: 0;
 }
 
 .page > nav > div.flex {
@@ -122,4 +125,21 @@ label.change-color > .ball {
   height: 0.2rem;
   transform: scale(1.1);
   transition: all ease-in 0.1s;
+}
+
+.page > article.container {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+}
+
+.page > article.container .title {
+  font-size: 4em;
+  font-weight: 700;
+  max-width: 70%;
+  line-height: 6rem;
 }
