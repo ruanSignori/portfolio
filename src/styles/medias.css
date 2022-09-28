@@ -1,16 +1,15 @@
 @media (max-width: 1024px) {
-  body > .page > nav {
+  .page > nav {
     padding: 2rem 5rem;
   }
 }
 
 @media (max-width: 750px) {
-
   .page > nav {
     padding: 1rem 2rem !important;
   }
 
-  body > .page > nav > div {
+  .page > nav > div {
     position: absolute;
     right: 0;
     display: none;
@@ -19,15 +18,13 @@
     justify-content: center;
     align-items: center;
     top: 8vh;
-    opacity: 0;
-    transition: opacity ease 0.2s;
   }
 
-  body > .page > nav > div a {
+  .page > nav > div a {
     margin: 3rem 0;
   }
 
-  body > .page > nav > div > .context-switch {
+  .page > nav > div > .context-switch {
     width: 70%;
     height: 5rem;
 
@@ -39,13 +36,26 @@
     border-radius: 1rem;
     padding: 1rem 2rem;
   }
-
-  body > .page > nav > div > .context-switch > .text-label {
+  
+  .page > nav > div > .context-switch > .text-label {
     display: block !important;
     color: var(--text-color_100);
   }
 
-  body > .page > nav > button.menu {
+  .page > nav > button.menu {
     display: block;
+    transition: all 0.3s;
+  }
+
+  .page > nav > button.active .item-1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .page > nav > button.active .item-2 {
+    opacity: 0;
+  }
+
+  .page > nav > button.active .item-3 {
+    transform: rotate(45deg) translate(-4px, -3px);
   }
 }

@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-  --bg-color_100: #F9FAFB;
-  --bg-color_200: #EEEEEE;
-  --bg-color_300: #E5E7EB;
-  --text-color_100: #374151;
-  --text-color_200: #1F2937;
 
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 
@@ -32,7 +27,7 @@
 body > .page {
   height: 100vh;
   background-color: var(--bg-color_100);
-  transition: background ease 0.2s;
+  transition: background-color ease 0.2s;
 }
 
 .flex {
@@ -72,6 +67,7 @@ body > .page > nav {
 .page > nav > div.onVisibility {
   display: flex !important;
   opacity: 1 !important;
+  animation: showElement 1s !important;
 }
 
 .page > nav > div.content-navbar > .context-switch > label.change-color {
@@ -109,11 +105,25 @@ label.change-color > .ball {
   display: none;
   cursor: pointer;
   border-radius: 0.3rem;
+  background-color: transparent;
 }
 
-.page > nav button.menu .line-menu{
-  margin: 8px;
+.page > nav button.menu .line-menu {
+  border-radius: 0.2rem;
+  margin: 0.3rem;
   background-color: var(--text-color_100);
   width: 1.5rem;
   height: 0.2rem;
+  transform: scale(1.1);
+}
+
+@keyframes showElement {
+  0% {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
