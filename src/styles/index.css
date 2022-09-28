@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
-
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 
   font-size: 16px;
@@ -24,7 +23,7 @@
   box-sizing: border-box;
 }
 
-body > .page {
+.page {
   height: 100vh;
   background-color: var(--bg-color_100);
   transition: background-color ease 0.2s;
@@ -35,13 +34,17 @@ body > .page {
   align-items: center;
 }
 
-body > .page > nav {
+.page > nav {
   width: 100%; 
-  padding: 3rem 10rem;
+  padding: 1.5rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+
+  backdrop-filter: saturate(50%) blur(8px);
+  background: var(--bg-color-transparent);
+  position: fixed;
 }
 
 .page > nav > div.flex {
@@ -52,6 +55,10 @@ body > .page > nav {
   color: var(--text-color_100);
   text-decoration: none;
   font-size: 1.1em;
+}
+
+.page > nav > div.content-navbar {
+  transition: all ease 0.4s;
 }
 
 .page > nav > div > a {
@@ -67,7 +74,6 @@ body > .page > nav {
 .page > nav > div.onVisibility {
   display: flex !important;
   opacity: 1 !important;
-  animation: showElement 1s !important;
 }
 
 .page > nav > div.content-navbar > .context-switch > label.change-color {
@@ -115,15 +121,5 @@ label.change-color > .ball {
   width: 1.5rem;
   height: 0.2rem;
   transform: scale(1.1);
-}
-
-@keyframes showElement {
-  0% {
-    opacity: 0;
-    transition: opacity 0.5s linear;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  transition: all ease-in 0.1s;
 }
