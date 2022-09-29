@@ -148,13 +148,18 @@ label.change-color > .ball {
 }
 
 .page > article.container {
+  max-width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 5rem;
   padding: 0 10rem;
-  height: 100vh;
+}
+
+.page > article > div {
+  flex: 1 1 450px;
 }
 
 .page > article.container .content-presentation {
@@ -191,38 +196,8 @@ label.change-color > .ball {
   fill: var(--bg-color_100);
 }
 
-.page > article.container .content-img {
-  max-width: 40rem;
-  flex: 1 1 400px;
+.page > article.container .content-img > img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
 }
-/* 
-.page > article.container {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5rem 10rem;
-}
-
-.page > article.container .title {
-  font-size: 3.5em;
-  font-family: var(--font-bold);
-  max-width: 70%;
-  line-height: 4rem;
-  color: var(--text-color_100);
-}
-
-.page > article.container .subtitle {
-  color: var(--text-color_200);
-  width: 40%;
-  font-size: 1.2em;
-  margin: 2rem 0;
-  line-height: 2rem;
-}
-
-.button {
-  padding: 0.2rem 2rem;
-  background-color: var(--text-color_100);
-  color: var(--bg-color_100);
-  border-radius: 0.3rem;
-} */

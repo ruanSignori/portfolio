@@ -43,9 +43,13 @@
     padding: 2rem 5rem;
     position: initial;
   }
+
+  .page > article.container {
+    gap: 5rem;
+  }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .page > nav {
     padding: 1rem 2rem !important;
   }
@@ -98,5 +102,12 @@
 
   .page > nav > button.active .item-3 {
     transform: rotate(45deg) translate(-3px, -3px);
+  }
+}
+
+@media (max-width: 550px) {
+  .page > article.container > div.content-presentation > p.title {
+    font-size: 1.8em;
+    line-height: 3rem;
   }
 }
