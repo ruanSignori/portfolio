@@ -1,3 +1,43 @@
+@media (max-width: 1715px) {
+  .page > article.container {
+    padding: 0 4.5rem;
+  }
+
+  .page > article.container > div.content-presentation > p.title {
+    font-size: 3em;
+  }
+
+  .page > article.container > div.content-presentation > p.subtitle {
+    font-size: 1.1em;
+  }
+} 
+
+@media (max-width: 1368px) {
+  .page > article.container {
+    gap: 0.5rem;
+  }
+
+  .page > article.container .content-presentation button {
+    width: 9rem;
+    font-size: 1em;
+  }
+
+  .page > article.container > div.content-presentation > p.title {
+    font-size: 2.5em;
+    line-height: 4rem;
+  }
+
+  .page > article.container > div.content-presentation > p.subtitle {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1198px) {
+  .page > article.container {
+    padding: 8rem 2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .page > nav {
     padding: 2rem 5rem;
@@ -13,7 +53,7 @@
   .page > nav > div {
     position: absolute;
     right: 0;
-    display: none;
+    display: none !important;
     width: 100%;
     flex-direction: column;
     justify-content: center;
@@ -57,6 +97,6 @@
   }
 
   .page > nav > button.active .item-3 {
-    transform: rotate(45deg) translate(-4px, -3px);
+    transform: rotate(45deg) translate(-3px, -3px);
   }
 }

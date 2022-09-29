@@ -1,6 +1,6 @@
-const buttonOpenMenu = document.querySelector("#app > nav > button.menu");
+const buttonOpenMenu = document.querySelector("#home > nav > button.menu");
 const bodyElement = document.querySelector('body');
-const modal = document.querySelector("#app > nav > div.content-navbar");
+const modal = document.querySelector("#home > nav > div.content-navbar");
 let modalIsOpen = false;
 
 buttonOpenMenu.addEventListener('click', () => {
