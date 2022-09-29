@@ -41,7 +41,6 @@
 @media (max-width: 1024px) {
   .page > nav {
     padding: 2rem 5rem;
-    position: initial;
   }
 
   .page > article.container {
@@ -56,6 +55,7 @@
 @media (max-width: 800px) {
   .page > nav {
     padding: 1rem 2rem !important;
+    position: initial;
   }
 
   .page > nav > div {

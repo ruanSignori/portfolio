@@ -3,6 +3,13 @@ const bodyElement = document.querySelector('body');
 const modal = document.querySelector("#home > nav > div.content-navbar");
 let modalIsOpen = false;
 
+
+window.addEventListener('resize', () => {
+  if (window.matchMedia("(min-width: 800px)").matches && modal.classList.contains('onVisibility')) {
+    modal.classList.remove('onVisibility');
+  };
+});
+
 buttonOpenMenu.addEventListener('click', () => {
   modalIsOpen ? modalIsOpen = false : modalIsOpen = true;
 
@@ -15,11 +22,8 @@ buttonOpenMenu.addEventListener('click', () => {
   };
 
   if (modal.classList.contains('onVisibility')) {
-  
     bodyElement.style.overflow = 'hidden'
-    console.log(bodyElement)
   } else {
     bodyElement.style.removeProperty('overflow');
-    console.log(bodyElement)
   };
 });
