@@ -1,3 +1,9 @@
+@media (prefers-reduced-motion) {
+  .hidden-element {
+    transition: none;
+  }
+}
+
 @media (max-width: 1715px) {
   .page > article.container {
     padding: 0 4.5rem;

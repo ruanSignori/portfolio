@@ -57,6 +57,17 @@ h2 {
   color: var(--text-color_100);
 }
 
+.hidden-element {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: transform 0.3s, opacity 0.5s  ease-in-out;
+}
+
+.show-element {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .page button#button {
   cursor: pointer;
   background-color: var(--text-color_100);
@@ -240,7 +251,6 @@ label.change-color > .ball {
 }
 
 .page > .content-carousel > div > .parent-slider {
-  position: absolute;
   display: flex;
   flex-wrap: wrap;
   margin: auto;

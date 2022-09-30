@@ -3,7 +3,7 @@ export const cardContent = [
     title: 'React',
     reference_Id: 'item-1',
     src_Img: '../assets/images/react-icon.svg',
-    text: 'Framework de javascript. Desenvolvimento de SPA. Utilização de hooks e props. Criação de componentes. Utilizado em conjunto com Typescript. Desenvolvimento de aplicativos mobiles utilizando React Native.'
+    text: 'Framework de javascript. Desenvolvimento de SPA. Utilização de hooks e props. Criação de componentes. Utilizado em conjunto com Typescript. Desenvolvimento de aplicativos mobile utilizando React Native.'
   },
   {
     title: 'TypeScript',
@@ -15,7 +15,7 @@ export const cardContent = [
     title: 'Linux',
     reference_Id: 'item-3',
     src_Img: '../assets/images/linux-icon.svg',
-    text: 'Terminal. Criação de servidor com apache. Experiência utilizando distribuições Debian, Ubuntu e Kali'
+    text: 'Familiaridade em utilizar o terminal. Criação de servidor com Apache. Experiência utilizando distribuições Debian, Ubuntu e Kali'
   },
   {
     title: 'Git',
