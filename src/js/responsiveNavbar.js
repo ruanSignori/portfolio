@@ -5,8 +5,9 @@ let modalIsOpen = false;
 
 
 window.addEventListener('resize', () => {
-  if (window.matchMedia("(min-width: 800px)").matches && modal.classList.contains('onVisibility')) {
-    modal.classList.remove('onVisibility');
+  if (window.matchMedia("(min-width: 800px)").matches && 
+      modal.classList.contains('onVisibility')) {
+        modal.classList.remove('onVisibility');
   };
 });
 
@@ -21,9 +22,7 @@ buttonOpenMenu.addEventListener('click', () => {
     buttonOpenMenu.classList.remove('active');
   };
 
-  if (modal.classList.contains('onVisibility')) {
-    bodyElement.style.overflow = 'hidden'
-  } else {
-    bodyElement.style.removeProperty('overflow');
-  };
+  modal.classList.contains('onVisibility') ? 
+  bodyElement.style.overflow = 'hidden' :
+  bodyElement.style.removeProperty('overflow');
 });

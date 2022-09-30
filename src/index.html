@@ -23,12 +23,8 @@
             <div class="text-label">Aparência</div>
             <input type="checkbox" id="theme" />
             <label for="theme" class="change-color flex">
-              <svg width="18" height="20" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.1893 20.7143C14.6406 20.7143 17.7927 19.2709 19.881 16.9057C20.19 16.5558 19.8531 16.0447 19.3757 16.1282C13.947 17.0786 8.96165 13.2524 8.96165 8.21489C8.96165 5.31312 10.6515 2.64474 13.398 1.20799C13.8213 0.986526 13.7148 0.396504 13.2338 0.314821C12.5594 0.20051 11.8751 0.14295 11.1893 0.142857C5.01295 0.142857 0 4.74374 0 10.4286C0 16.1062 5.00509 20.7143 11.1893 20.7143Z" fill="#18181B"/>
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.00044 5.625C7.14058 5.625 5.62527 7.14023 5.62527 9C5.62527 10.8598 7.14058 12.375 9.00044 12.375C10.8603 12.375 12.3756 10.8598 12.3756 9C12.3756 7.14023 10.8603 5.625 9.00044 5.625ZM17.6634 8.45508L14.3339 6.79219L15.5117 3.2625C15.6699 2.78438 15.2164 2.33086 14.7417 2.49258L11.2119 3.67031L9.54539 0.3375C9.32037 -0.1125 8.6805 -0.1125 8.45549 0.3375L6.79252 3.6668L3.25914 2.48906C2.78099 2.33086 2.32746 2.78437 2.48918 3.25898L3.66698 6.78867L0.337516 8.45508C-0.112505 8.68008 -0.112505 9.31992 0.337516 9.54492L3.66698 11.2078L2.48918 14.741C2.33097 15.2191 2.78451 15.6727 3.25914 15.5109L6.789 14.3332L8.45197 17.6625C8.67698 18.1125 9.31686 18.1125 9.54187 17.6625L11.2048 14.3332L14.7347 15.5109C15.2128 15.6691 15.6664 15.2156 15.5047 14.741L14.3269 11.2113L17.6563 9.54844C18.1134 9.31992 18.1134 8.68008 17.6634 8.45508ZM12.1822 12.1816C10.4278 13.9359 7.57302 13.9359 5.81864 12.1816C4.06426 10.4273 4.06426 7.57266 5.81864 5.81836C7.57302 4.06406 10.4278 4.06406 12.1822 5.81836C13.9366 7.57266 13.9366 10.4273 12.1822 12.1816Z" fill="#F9FAFB"/>
-              </svg>
+              <img src="./assets/images/moon-vector.svg" width="18" height="20"/>
+              <img src="./assets/images/sun-vector.svg" width="18" height="18"/>
               <div class="ball"></div>
             </label>
           </div>
@@ -48,14 +44,22 @@
           </a>
         </div>
         <div class="content-img">
-          <img src="assets/images/background-ruan.webp" width="505" loading="lazy" />
+          <img src="assets/images/illustration.webp" width="505" loading="lazy" />
         </div>
       </article>
     </div>
-    <div class="page" id="skills">
+    <div id="skills" class="page">
       <div class="content-carousel">
         <h2>Conhecimentos</h2>
-        <div></div>
+        <div>
+          <input type="radio" id="item-1" />
+          <input type="radio" id="item-2" />
+          <input type="radio" id="item-3" />
+          <input type="radio" id="item-4" />
+          <input type="radio" id="item-5" />
+          <div class="parent-slider">     
+          </div>
+        </div>
       </div>
     </div>
     <script type="module" src="./js/main.js" defer></script>

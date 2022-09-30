@@ -83,6 +83,7 @@ h2 {
   background: var(--bg-color-transparent);
   position: fixed;
   top: 0;
+  z-index: 99;
 }
 
 .page > nav > div.flex {
@@ -222,8 +223,54 @@ label.change-color > .ball {
   display: block;
   max-width: 100%;
 }
+
+.page#skills {
+  padding: 5rem 3rem;
+}
  
 .page > .content-carousel {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.page > .content-carousel > div > input[type=radio] {
+  display: none;
+}
+
+.page > .content-carousel > div > .parent-slider {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 2rem;
+}
+
+.page > .content-carousel > div > .parent-slider .card {
+  width: 18rem;
+  height: 30rem;
+  border: 1px solid var(--bg-color_200);
+  border-radius: 0.8rem;
+  background-image: linear-gradient(320deg, var(--bg-color_100), var(--bg-color_200));
+  backdrop-filter: saturate(50%) blur(8px);
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page > .content-carousel > div > .parent-slider > .card > .title-card {
+  color: var(--text-color_100);
+  font-family: var(--font-bold);
+  font-size: 1.1em;
+}
+
+.page > .content-carousel > div > .parent-slider > .card > .content-card {
+  color: var(--text-color_200);
+  line-height: 24px;
 }

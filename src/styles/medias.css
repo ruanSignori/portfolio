@@ -107,6 +107,14 @@
   .page > nav > button.active .item-3 {
     transform: rotate(45deg) translate(-3px, -3px);
   }
+
+  .page > article.container {
+    padding: 5rem 2rem;
+  }
+
+  .page#skills {
+    padding: 3rem 1rem;
+  }
 }
 
 @media (max-width: 550px) {
