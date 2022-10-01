@@ -3,7 +3,6 @@ const bodyElement = document.querySelector('body');
 const modal = document.querySelector("#home > nav > div.content-navbar");
 let modalIsOpen = false;
 
-
 window.addEventListener('resize', () => {
   if (window.matchMedia("(min-width: 800px)").matches && 
       modal.classList.contains('onVisibility')) {

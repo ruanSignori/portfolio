@@ -9,7 +9,7 @@ const createCardSlider = (reference, src_img, title, content_text) => {
   const p_content = document.createElement('p');
 
   label.setAttribute('id', reference); 
-  label.classList.add('card');
+  label.classList.add('card', 'hidden-element');
 
   p_title.textContent = title;
   p_title.classList.add('title-card');
