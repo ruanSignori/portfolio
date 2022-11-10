@@ -126,8 +126,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 4rem;
-    overflow-y: hidden;
-    touch-action: cross-slide-y
+    overflow-y: hidden !impo;
+    scrollbar-width: 0;
+    touch-action: cross-slide-y;
+    scroll-behavior: smooth;
   }
 
   .page > .content-carousel > div > .parent-slider .card {
