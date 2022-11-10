@@ -10,14 +10,14 @@
     <div id="home" class="page">
       <nav>
         <a href="#home" class="item-navbar">Início</a>
-        <button type="button" class="menu">
+        <button type="button" class="menu" name="menu">
           <div class="line-menu item-1"></div>
           <div class="line-menu item-2"></div>
           <div class="line-menu item-3"></div>
         </button>
         <div class="flex content-navbar" >
           <a href="#about" class="item-navbar">Sobre</a>
-          <a href="#project" class="item-navbar">Projetos</a>
+          <a href="#projects" class="item-navbar">Projetos</a>
           <a href="#contact" class="item-navbar">Contato</a>
           <div class="context-switch">
             <div class="text-label">Aparência</div>
@@ -35,7 +35,7 @@
           <p class="title">Olá, sou Ruan Signori.<br> Sou um programador<br> e estudante.</p>
           <p class="subtitle">Sou fascinado por tecnologia. Atualmente <br> estou aprofundando meus estudos em redes, <br> e pretendo seguir carreira na área de Infraestrutura.</p>
           <a href="#skills">
-            <button class="flex" id="button">
+            <button class="flex" id="button" name="more">
               <p>Ver mais</p>
               <svg width="22" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.3481 4.54169H0.833496V7.45835H18.3481V11.8334L24.1668 6.00002L18.3481 0.166687V4.54169Z" />
@@ -44,7 +44,7 @@
           </a>
         </div>
         <div class="content-img">
-          <img src="assets/images/illustration.webp" width="505" loading="lazy" />
+          <img src="assets/images/illustration.webp" width="505" loading="lazy" alt="Imagem de um desenvolvedor web"/>
         </div>
       </article>
     </div>
@@ -78,8 +78,13 @@
           nessa área aplicando em conjunto os conhecimentos que eu tenho com
           programação.</p>
         <p class="hidden-element">No momento, continuo estudando sobre redes, porém com atividades 
-          voltadas para a área de Segurança da Informação.</p>
+          voltadas para a área de Segurança da Informação e Infraestrutura.</p>
       </article>
+    </div>
+    <div id="projects" class="page flex content-projects">
+      <section class="flex">
+        <h2>Projetos</h2>
+      </section>
     </div>
     <script type="module" src="./js/main.js" defer></script>
   </body>

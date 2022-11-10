@@ -18,19 +18,17 @@ const changeTheme = (theme) => {
 };
 
 const getThemeLocalStorage = localStorage.getItem('theme');
-const inputCheck = document.querySelector('input#theme');
+const inputChangeTheme = document.querySelector('input#theme');
 
 if (getThemeLocalStorage === 'light') {
-  changeTheme(lightTheme)
+  changeTheme(lightTheme);
 } else {
-  inputCheck.checked = true;
-  changeTheme(darkTheme)
+  inputChangeTheme.checked = true;
+  changeTheme(darkTheme);
 };
 
-inputCheck.addEventListener('change', () => {
-  const isChecked = inputCheck.checked;
+inputChangeTheme.addEventListener('change', () => {
+  const switchIsChecked = inputChangeTheme.checked;
   
-  isChecked ? changeTheme(darkTheme) : changeTheme(lightTheme);
+  switchIsChecked ? changeTheme(darkTheme) : changeTheme(lightTheme);
 });
-
-

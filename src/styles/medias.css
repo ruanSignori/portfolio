@@ -121,6 +121,22 @@
   .page#skills {
     padding: 3rem 1rem;
   }
+
+  .page > .content-carousel > div > .parent-slider {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4rem;
+    overflow-y: hidden;
+    touch-action: cross-slide-y
+  }
+
+  .page > .content-carousel > div > .parent-slider .card {
+    min-width: 18rem;
+  }
+
+  .page > .content-carousel > div > .parent-slider .card:first-child {
+    margin-left: 2rem;
+  }
 }
 
 @media (max-width: 550px) {

@@ -127,6 +127,18 @@ h2 {
   opacity: 1 !important;
   height: 92vh;
   background-color: var(--bg-color_100) !important;
+  transition: animation 0.4s ease;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .page > nav > div.content-navbar > .context-switch > label.change-color {
@@ -262,6 +274,10 @@ label.change-color > .ball {
   gap: 2rem;
 }
 
+.page > .content-carousel > div > .slider-visible {
+  flex-direction: row;
+}
+
 .page > .content-carousel > div > .parent-slider .card {
   width: 18rem;
   height: 30rem;
@@ -281,6 +297,17 @@ label.change-color > .ball {
   gap: 2rem;
 }
 
+.page > .content-carousel > div > .parent-slider .hidden-card {
+  transform: scale(0.7);
+  opacity: 0.9;
+  transition: all ease 0.4s
+}
+
+.page > .content-carousel > div > .parent-slider .visible-card {
+  transform: scale(1);
+  opacity: 1;
+}
+
 .page > .content-carousel > div > .parent-slider > .card > .title-card {
   color: var(--text-color_100);
   font-family: var(--font-bold);
@@ -295,7 +322,7 @@ label.change-color > .ball {
 .page article.content-about {
   flex-direction: column;
   gap: 10rem;
-  padding: 5rem 2rem;
+  padding: 5rem 3rem;
 }
 
 .page article.content-about p {
@@ -306,4 +333,8 @@ label.change-color > .ball {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.8rem;
+}
+
+.page.content-projects section {
+  flex-direction: column;
 }
