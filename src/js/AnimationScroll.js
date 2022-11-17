@@ -12,14 +12,14 @@ const animatedElements = document.querySelectorAll('.hidden-element');
 animatedElements.forEach((e) => observer.observe(e));
 
 
-//  Código provisório, somente para teste
-const observer2 = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    entry.isIntersecting ? 
-    entry.target.classList.add('visible-card'):
-    entry.target.classList.remove('visible-card')
-  });
-});
+// //  Código provisório, somente para teste
+// const observer2 = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     entry.isIntersecting ? 
+//     entry.target.classList.add('visible-card'):
+//     entry.target.classList.remove('visible-card')
+//   });
+// });
 
-const animatedElements2 = document.querySelectorAll('.hidden-card');
-animatedElements2.forEach((e) => observer2.observe(e));
+// const animatedElements2 = document.querySelectorAll('.hidden-card');
+// animatedElements2.forEach((e) => observer2.observe(e));

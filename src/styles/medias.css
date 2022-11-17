@@ -122,7 +122,7 @@
     padding: 3rem 1rem;
   }
 
-  .page > .content-carousel > div > .parent-slider {
+  .page > .content-skills > div > .parent-slider {
     flex-direction: row;
     flex-flow: row nowrap;
     gap: 4rem;
@@ -132,16 +132,12 @@
     scrollbar-width: none;
   }
 
-  ::-webkit-scrollbar {
-    
-  }
-
-  .page > .content-carousel > div > .parent-slider .card {
+  .page > .content-skills > div > .parent-slider .card {
     min-width: 18rem;
     flex-shrink: 0;
   }
 
-  .page > .content-carousel > div > .parent-slider .card:first-child {
+  .page > .content-skills > div > .parent-slider .card:first-child {
     margin-left: 2rem;
   }
 }

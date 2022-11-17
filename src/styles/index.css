@@ -256,29 +256,29 @@ label.change-color > .ball {
   padding: 5rem 3rem;
 }
  
-.page > .content-carousel {
+.page > .content-skills {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 5rem;
 }
 
-.page > .content-carousel > div > input[type=radio] {
+.page > .content-skills > div > input[type=radio] {
   display: none;
 }
 
-.page > .content-carousel > div > .parent-slider {
+.page > .content-skills > div > .parent-slider {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
   gap: 2rem;
 }
 
-.page > .content-carousel > div > .slider-visible {
+.page > .content-skills > div > .slider-visible {
   flex-direction: row;
 }
 
-.page > .content-carousel > div > .parent-slider .card {
+.page > .content-skills > div > .parent-slider .card {
   width: 18rem;
   height: 30rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -297,24 +297,24 @@ label.change-color > .ball {
   gap: 2rem;
 }
 
-.page > .content-carousel > div > .parent-slider .hidden-card {
+.page > .content-skills > div > .parent-slider .hidden-card {
   transform: scale(0.7);
   opacity: 0.9;
   transition: all ease 0.4s
 }
 
-.page > .content-carousel > div > .parent-slider .visible-card {
+.page > .content-skills > div > .parent-slider .visible-card {
   transform: scale(1);
   opacity: 1;
 }
 
-.page > .content-carousel > div > .parent-slider > .card > .title-card {
+.page > .content-skills > div > .parent-slider > .card > .title-card {
   color: var(--text-color_100);
   font-family: var(--font-bold);
   font-size: 1.1em;
 }
 
-.page > .content-carousel > div > .parent-slider > .card > .content-card {
+.page > .content-skills > div > .parent-slider > .card > .content-card {
   color: var(--text-color_200);
   line-height: 24px;
 }

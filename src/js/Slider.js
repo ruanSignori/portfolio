@@ -1,6 +1,6 @@
 import { cardContent } from "../utils/CardContext";
 
-const containerCarousel = document.querySelector("#skills > div.content-carousel > div > div.parent-slider");
+const containerCarousel = document.querySelector("#skills > div.content-skills > div > div.parent-slider");
 
 // Cria de forma dinâmica os cards 
 const createCardSlider = (reference, src_img, title, content_text) => {
