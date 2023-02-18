@@ -123,22 +123,7 @@
   }
 
   .page > .content-skills > div > .parent-slider {
-    flex-direction: row;
-    flex-flow: row nowrap;
-    gap: 4rem;
-    overflow-x: auto;
-    touch-action: cross-slide-y;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-  }
-
-  .page > .content-skills > div > .parent-slider .card {
-    min-width: 18rem;
-    flex-shrink: 0;
-  }
-
-  .page > .content-skills > div > .parent-slider .card:first-child {
-    margin-left: 2rem;
+    transform: scale(0.8);
   }
 }
 
