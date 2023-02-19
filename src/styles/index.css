@@ -152,6 +152,7 @@ h2 {
   justify-content: space-between;
 
   transform: scale(0.9);
+  user-select: none;
 }
 
 .page
@@ -280,7 +281,7 @@ h2 {
 }
 
 .page > .content-skills > div > .parent-slider {
-  height: 40rem;
+  height: 42rem;
   position: relative;
   user-select: none;
 }
@@ -384,6 +385,7 @@ h2 {
   height: 50px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 1);
+  backdrop-filter: saturate(50%) blur(8px);
   z-index: -99;
 }
 

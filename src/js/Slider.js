@@ -11,7 +11,10 @@ buttonRight.addEventListener("click", () => {
 });
 
 let current = 0;
-let prev = 4;
+
+// Index de onde está adicionado a class 'prev' no DOM
+// Se for adicionado mais um elemento, esse número deve ser alterado!
+let prev = container.length;
 let next = 1;
 
 const toPrevious = () => {
