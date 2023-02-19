@@ -351,7 +351,7 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 340px;
-  z-index: 100;
+  z-index: 95;
 }
 
 .page > .content-skills > div > .parent-slider .button-container > .button {
@@ -386,7 +386,7 @@ h2 {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 1);
   backdrop-filter: saturate(50%) blur(8px);
-  z-index: -99;
+  z-index: -96;
 }
 
 .page
