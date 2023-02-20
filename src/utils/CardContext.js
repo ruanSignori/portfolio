@@ -3,6 +3,8 @@ import TypeScriptIcon from "../assets/images/typeScript-icon.svg";
 import LinuxIcon from "../assets/images/linux-icon.svg";
 import GitIcon from "../assets/images/git-icon.svg";
 import RedesIcon from "../assets/images/redes-icon.svg";
+import NextJSIcon from "../assets/images/nextJs-icon.svg";
+import NodeJSIcon from "../assets/images/nodeJs-icon.svg";
 
 export const cardContent = [
   {
@@ -15,24 +17,36 @@ export const cardContent = [
     title: "TypeScript",
     srcImg: TypeScriptIcon,
     altImg: "TypeScript icon",
-    text: "Superset de javascript. Programação orientada à objetos. Types Generics. Types decorators. Namespace e modules.",
+    text: "Superset de javascript. Conhecimento em POO, Types Generics, Decorators, Namespace e modules.",
   },
   {
     title: "Linux",
     srcImg: LinuxIcon,
     altImg: "Linux icon",
-    text: "Familiaridade em utilizar o terminal. Criação de servidor com Apache. Experiência utilizando distribuições Debian, Ubuntu e Kali",
+    text: "Familiaridade em utilizar o terminal. Criação de Servidores FTP e Apache com proxy reverso. Experiência utilizando distribuições Debian, Ubuntu e Kali.",
+  },
+  {
+    title: "NextJS",
+    srcImg: NextJSIcon,
+    altImg: "NextJS icon",
+    text: "Desenvolvimento de aplicações utilizando SSR, SSG.",
   },
   {
     title: "Git",
     srcImg: GitIcon,
     altImg: "Git icon",
-    text: "Ferramento de versionamento de código.",
+    text: "Ferramenta de versionamento de código. Utilização de Conventional Commits",
   },
   {
     title: "Redes de computadores",
     srcImg: RedesIcon,
     altImg: "Redes icon",
     text: "Conhecimento sobre topologias e protocolos de redes e comunicação. Configuração de servidores e serviços. Experiência trabalhando em uma provedora de internet.",
+  },
+  {
+    title: "NodeJS",
+    srcImg: NodeJSIcon,
+    altImg: "NodeJS icon",
+    text: "Criação de API Rest, Middlewares, e conexão com banco de Dados",
   },
 ];
