@@ -12,8 +12,6 @@ buttonRight.addEventListener("click", () => {
 
 let current = 0;
 
-// Index de onde está adicionado a class 'prev' no DOM
-// Se for adicionado mais um elemento, esse número deve ser alterado!
 let prev = container.length;
 let next = 1;
 
@@ -22,7 +20,7 @@ const toPrevious = () => {
 };
 
 const toNext = () => {
-  current < 4 ? toSlide(current + 1) : toSlide(0);
+  current < container.length - 1 ? toSlide(current + 1) : toSlide(0);
 };
 
 const toSlide = (number) => {
@@ -36,9 +34,9 @@ const toSlide = (number) => {
     container[i].classList.remove("next");
   }
 
-  if (next == 5) next = 0;
+  if (next === container.length) next = 0;
 
-  if (prev == -1) prev = 4;
+  if (prev === -1) prev = container.length - 1;
 
   container[current].classList.add("active");
   container[prev].classList.add("prev");
