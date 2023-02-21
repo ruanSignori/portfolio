@@ -77,8 +77,18 @@ li::marker {
   color: var(--text-color_100);
 }
 
-p, strong, h3, h4, h5 {
+p,
+strong,
+h3,
+h4,
+h5 {
   color: var(--text-color_200);
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(#b429f9, #26c5f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .page button#button {
