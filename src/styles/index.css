@@ -69,6 +69,18 @@ h2 {
   transform: scale(1);
 }
 
+li {
+  margin-left: 1rem;
+}
+
+li::marker {
+  color: var(--text-color_100);
+}
+
+p, strong, h3, h4, h5 {
+  color: var(--text-color_200);
+}
+
 .page button#button {
   cursor: pointer;
   background-color: var(--text-color_100);
@@ -250,6 +262,10 @@ h2 {
   font-size: 1.1rem;
 }
 
+.page > section.container .content-presentation button p {
+  color: var(--bg-color_200);
+}
+
 .page > section.container .content-presentation button > svg {
   user-select: none;
 }
@@ -265,11 +281,14 @@ h2 {
 }
 
 .page#about {
-  justify-content: center;
-  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15rem;
+  padding: 5rem 0;
 }
 
-.page#about > article p {
+.page#about > article .text-about {
   font-size: 1.1em;
   line-height: 2rem;
   max-width: 25rem;
@@ -295,11 +314,22 @@ h2 {
   gap: 8rem;
 }
 
-.page > article > .container-about > .children-container > .content-about {
+.page > article > .container-about > .children-container .content-about {
   align-self: flex-start;
   flex: 1 1 300px;
   flex-direction: column;
   gap: 2.5rem;
+}
+
+.page
+  > article
+  > .container-about
+  > .children-container
+  .content-about
+  .experience {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .page > article > .container-about .line {

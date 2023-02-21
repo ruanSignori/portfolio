@@ -118,6 +118,10 @@
     padding: 5rem 2rem;
   }
 
+  .page#about {
+    gap: 5rem;
+  }
+
   .page#skills {
     padding: 3rem 1rem;
   }
