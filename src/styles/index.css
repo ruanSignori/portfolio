@@ -91,6 +91,7 @@ h2 {
   justify-content: space-between;
   flex-direction: row;
 
+  -webkit-backdrop-filter: saturate(50%) blur(8px);
   backdrop-filter: saturate(50%) blur(8px);
   background: var(--bg-color-transparent);
   position: fixed;
@@ -200,7 +201,7 @@ h2 {
   transition: all ease-in 0.1s;
 }
 
-.page > article.container {
+.page > section.container {
   max-width: 100%;
   min-height: 100vh;
   display: flex;
@@ -211,17 +212,17 @@ h2 {
   padding: 0 10rem;
 }
 
-.page > article > div {
+.page > section > div {
   flex: 1 1 450px;
 }
 
-.page > article.container .content-presentation {
+.page > section.container .content-presentation {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-.page > article.container .content-presentation .title {
+.page > section.container .content-presentation .title {
   font-family: var(--font-bold);
   font-weight: 700;
   font-size: 3.5em;
@@ -229,17 +230,17 @@ h2 {
   color: var(--text-color_100);
 }
 
-.page > article.container .content-presentation .subtitle {
+.page > section.container .content-presentation .subtitle {
   color: var(--text-color_200);
   font-size: 1.2rem;
   line-height: 2rem;
 }
 
-.page > article.container .content-presentation a {
+.page > section.container .content-presentation a {
   width: 10rem;
 }
 
-.page > article.container .content-presentation button {
+.page > section.container .content-presentation button {
   width: 10rem;
   display: flex;
   align-items: center;
@@ -249,18 +250,63 @@ h2 {
   font-size: 1.1rem;
 }
 
-.page > article.container .content-presentation button > svg {
+.page > section.container .content-presentation button > svg {
   user-select: none;
 }
 
-.page > article.container .content-presentation button > svg > path {
+.page > section.container .content-presentation button > svg > path {
   fill: var(--bg-color_100);
 }
 
-.page > article.container .content-img > img {
+.page > section.container .content-img > img {
   margin: auto;
   display: block;
   max-width: 100%;
+}
+
+.page#about {
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.page#about > article p {
+  font-size: 1.1em;
+  line-height: 2rem;
+  max-width: 25rem;
+}
+
+.page > article {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page > article > .container-about {
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2.3rem;
+}
+
+.page > article > .container-about > .children-container {
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+
+.page > article > .container-about > .children-container > .content-about {
+  align-self: flex-start;
+  flex: 1 1 300px;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.page > article > .container-about .line {
+  display: block;
+  width: 20rem;
+  height: 2px;
+  background-color: var(--text-color_200);
+  border: none;
 }
 
 .page#skills {
@@ -298,6 +344,7 @@ h2 {
     var(--bg-color_100),
     var(--bg-color_200)
   );
+  -webkit-backdrop-filter: saturate(50%) blur(8px);
   backdrop-filter: saturate(50%) blur(8px);
   padding: 2rem 1.5rem;
 
@@ -385,6 +432,7 @@ h2 {
   height: 50px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 1);
+  -webkit-backdrop-filter: saturate(50%) blur(8px);
   backdrop-filter: saturate(50%) blur(8px);
   z-index: -96;
 }
@@ -405,24 +453,4 @@ h2 {
   > .button-container
   > .button:nth-child(2) {
   float: right;
-}
-
-.page article.content-about {
-  flex-direction: column;
-  gap: 10rem;
-  padding: 5rem 3rem;
-}
-
-.page article.content-about p {
-  max-width: 30rem;
-  color: var(--text-color_200);
-  text-justify: inter-word;
-  word-break: keep-all;
-  text-align: center;
-  font-size: 1.2em;
-  line-height: 1.8rem;
-}
-
-.page.content-projects section {
-  flex-direction: column;
 }

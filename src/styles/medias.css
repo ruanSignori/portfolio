@@ -5,41 +5,41 @@
 }
 
 @media (max-width: 1715px) {
-  .page > article.container {
+  .page > section.container {
     padding: 0 4.5rem;
   }
 
-  .page > article.container > div.content-presentation > p.title {
+  .page > section.container > div.content-presentation > p.title {
     font-size: 3em;
   }
 
-  .page > article.container > div.content-presentation > p.subtitle {
+  .page > section.container > div.content-presentation > p.subtitle {
     font-size: 1.1em;
   }
-} 
+}
 
 @media (max-width: 1368px) {
-  .page > article.container {
+  .page > section.container {
     gap: 0.5rem;
   }
 
-  .page > article.container .content-presentation button {
+  .page > section.container .content-presentation button {
     width: 9rem;
     font-size: 1em;
   }
 
-  .page > article.container > div.content-presentation > p.title {
+  .page > section.container > div.content-presentation > p.title {
     font-size: 2.5em;
     line-height: 4rem;
   }
 
-  .page > article.container > div.content-presentation > p.subtitle {
+  .page > section.container > div.content-presentation > p.subtitle {
     font-size: 1em;
   }
 }
 
 @media (max-width: 1198px) {
-  .page > article.container {
+  .page > section.container {
     padding: 8rem 2rem;
   }
 }
@@ -49,7 +49,7 @@
     padding: 2rem 5rem;
   }
 
-  .page > article.container {
+  .page > section.container {
     gap: 5rem;
   }
 
@@ -91,7 +91,7 @@
     border-radius: 1rem;
     padding: 1rem 2rem;
   }
-  
+
   .page > nav > div > .context-switch > .text-label {
     display: block !important;
     color: var(--text-color_100);
@@ -114,7 +114,7 @@
     transform: rotate(45deg) translate(-3px, -3px);
   }
 
-  .page > article.container {
+  .page > section.container {
     padding: 5rem 2rem;
   }
 
@@ -125,10 +125,22 @@
   .page > .content-skills > div > .parent-slider {
     transform: scale(0.85);
   }
+
+  .page > article > .container-about > .children-container {
+    gap: 2rem;
+  }
+
+  .page > article > .container-about > .children-container > .content-about {
+    align-items: flex-start !important;
+  }
 }
 
 @media (max-width: 550px) {
-  .page > article.container > div.content-presentation > p.title {
+  .page > article > .container-about .line {
+    width: 15rem;
+  }
+
+  .page > section.container > div.content-presentation > p.title {
     font-size: 1.8em;
     line-height: 3rem;
   }
