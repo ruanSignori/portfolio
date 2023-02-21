@@ -273,6 +273,7 @@ h2 {
   font-size: 1.1em;
   line-height: 2rem;
   max-width: 25rem;
+  color: var(--text-color_200);
 }
 
 .page > article {
