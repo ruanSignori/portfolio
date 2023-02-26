@@ -42,6 +42,10 @@
   .page > section.container {
     padding: 8rem 2rem;
   }
+
+  .page#projects > section > .container-projects {
+    flex-basis: calc(50% - 20px);
+  }
 }
 
 @media (max-width: 1024px) {
