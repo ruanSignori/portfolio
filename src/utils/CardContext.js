@@ -1,10 +1,10 @@
-import ReactIcon from "../assets/images/react-icon.svg";
-import TypeScriptIcon from "../assets/images/typeScript-icon.svg";
-import LinuxIcon from "../assets/images/linux-icon.svg";
-import GitIcon from "../assets/images/git-icon.svg";
-import RedesIcon from "../assets/images/redes-icon.svg";
-import NextJSIcon from "../assets/images/nextJs-icon.svg";
-import NodeJSIcon from "../assets/images/nodeJs-icon.svg";
+import ReactIcon from "../assets/images/technologies/react-icon.svg";
+import TypeScriptIcon from "../assets/images/technologies/typeScript-icon.svg";
+import LinuxIcon from "../assets/images/technologies/linux-icon.svg";
+import GitIcon from "../assets/images/technologies/git-icon.svg";
+import RedesIcon from "../assets/images/technologies/redes-icon.svg";
+import NextJSIcon from "../assets/images/technologies/nextJs-icon.svg";
+import NodeJSIcon from "../assets/images/technologies/nodeJs-icon.svg";
 
 export const cardContent = [
   {

@@ -92,13 +92,18 @@ h5 {
   -webkit-text-fill-color: transparent;
 }
 
-.page button#button {
+.page button.button {
   cursor: pointer;
   background-color: var(--text-color_100);
   color: var(--bg-color_100);
   border-radius: 0.3rem;
   padding: 0.3rem;
   transition: transform ease-in 0.1s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.page button.button:focus {
+  box-shadow: rgba(0, 119, 255, 0.3) 0px 0px 0px 3px;
 }
 
 .page button#button:hover {
@@ -526,9 +531,10 @@ h5 {
   max-width: 25rem;
   min-height: 14.5rem;
   padding: 1.5rem;
-  border: 2px solid;
   border-radius: 0.8rem;
+  border: 2px solid;
   border-color: var(--bg-color_300);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .page#projects > section > .container-projects > .card-project > :nth-child(1) {
@@ -567,4 +573,102 @@ h5 {
   background-color: var(--text-color_100);
   padding: 0.7rem;
   border-radius: 0.4rem;
+}
+
+#contact > section {
+  padding: 5rem 2rem;
+  flex-direction: column;
+}
+
+#contact > section > .container-contact {
+  width: 100%;
+  justify-content: space-around;
+  gap: 10rem;
+}
+
+section > .container-contact > form {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+section > .container-contact > form > .input-field {
+  width: 100%;
+  margin-top: 5rem;
+  position: relative;
+}
+
+section > .container-contact > form > .input-field > input {
+  width: 20rem;
+  height: 4rem;
+  padding: 2rem 1rem;
+  position: relative;
+  padding: 15px 8px 1px 8px;
+  font-size: 1.1em;
+}
+
+section > .container-contact > form > .input-field > label {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  color: var(--bg-color_400);
+  text-transform: uppercase;
+  font-family: var(--font-bold);
+  font-size: 1em;
+  transition: all ease 0.1s;
+  letter-spacing: 1px;
+}
+
+section > .container-contact > form > .input-field > input,
+section > .container-contact > form > textarea {
+  background-color: transparent;
+  border-radius: 0.4rem;
+  border: 2px solid var(--bg-color_400);
+}
+
+section > .container-contact > form > .input-field > input:focus,
+section > .container-contact > form > textarea:focus {
+  outline: none;
+  box-shadow: rgba(0, 119, 255, 0.3) 0px 0px 0px 3px;
+}
+
+section > .container-contact > form > .input-field > input:valid ~ label,
+section > .container-contact > form > .input-field > input:invalid ~ label,
+section > .container-contact > form > .input-field > input:focus ~ label {
+  transform: translate(-10px, -16px);
+  font-size: 0.7em;
+}
+
+section > .container-contact > form > textarea {
+  width: 35rem;
+  min-height: 4rem;
+  max-height: 40rem;
+  padding: 1rem;
+  resize: vertical;
+}
+
+section > .container-contact > form > button {
+  width: 8rem;
+  font-size: 1em;
+  height: 3rem;
+  align-self: flex-start;
+}
+
+section > .container-contact > .line {
+  width: 2px;
+  align-self: center;
+  align-content: center;
+  height: 300px;
+  background-color: var(--text-color_100);
+}
+
+section > .container-contact > .container-social-cards {
+  flex-wrap: wrap;
+}
+
+section > .container-contact > .container-social-cards > .social-card {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  margin: 12px;
 }
