@@ -16,6 +16,14 @@
   .page > section.container > div.content-presentation > p.subtitle {
     font-size: 1.1em;
   }
+
+  #contact > section > div:first-child {
+    margin-left: 2rem;
+  }
+
+  #contact > section > div:last-child {
+    margin-right: 2rem;
+  }
 }
 
 @media (max-width: 1368px) {
@@ -38,34 +46,11 @@
   }
 }
 
-@media (max-width: 1198px) {
-  .page > section.container {
-    padding: 8rem 2rem;
-  }
-
-  .page#projects > section > .container-projects {
-    flex-basis: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 1024px) {
-  .page > nav {
-    padding: 2rem 5rem;
-  }
-
-  .page > section.container {
-    gap: 5rem;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .page > nav {
     padding: 1rem 2rem !important;
     position: initial;
+    justify-content: space-between;
   }
 
   .page > nav > div {
@@ -84,12 +69,8 @@
   }
 
   .page > nav > div > .context-switch {
-    width: 70%;
+    width: 23rem;
     height: 5rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     background-color: var(--bg-color_200);
     border-radius: 1rem;
@@ -119,6 +100,53 @@
   }
 
   .page > section.container {
+    padding: 8rem 2rem;
+  }
+
+  .page#projects > section > .container-projects {
+    flex-basis: calc(50% - 20px);
+  }
+
+  #contact > section {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: flex-start;
+    align-items: center;
+  }
+
+  #contact > section > div:first-child {
+    margin: 0;
+  }
+
+  #contact > section > div:last-child {
+    margin: 0;
+  }
+
+  #contact > section .container-social-cards > h2 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page > nav {
+    padding: 2rem 5rem;
+  }
+
+  .page > section.container {
+    gap: 5rem;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 800px) {
+  .page > nav > div > .context-switch {
+    width: 15rem;
+  }
+
+  .page > section.container {
     padding: 5rem 2rem;
   }
 
@@ -141,6 +169,10 @@
   .page > article > .container-about > .children-container > .content-about {
     align-items: flex-start !important;
   }
+
+  #contact > section > .container-form-contact > form > textarea {
+    max-width: 26rem;
+  }
 }
 
 @media (max-width: 550px) {
@@ -151,5 +183,35 @@
   .page > section.container > div.content-presentation > p.title {
     font-size: 1.8em;
     line-height: 3rem;
+  }
+
+  #contact > section > .container-form-contact > form > .input-field label {
+    font-size: 0.7em;
+  }
+
+  #contact
+    > section
+    > .container-form-contact
+    > form
+    > .input-field
+    input:valid
+    ~ label,
+  #contact
+    > section
+    > .container-form-contact
+    > form
+    > .input-field
+    input:focus
+    ~ label {
+    transform: translate(-11px, -17px);
+    font-size: 0.5em;
+  }
+
+  #contact > section > .container-form-contact > form > .input-field input {
+    width: 15rem;
+  }
+
+  #contact > section > .container-form-contact > form > textarea {
+    width: 18rem;
   }
 }

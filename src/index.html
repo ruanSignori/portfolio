@@ -23,35 +23,36 @@
   <body>
     <div id="home" class="page">
       <nav>
-        <a href="#home" class="item-navbar">Início</a>
+        <img src="assets/images/logo.svg" width="200" height="80" alt="Ruan Signori logo" loading="lazy">
         <button type="button" class="menu" name="menu">
           <div class="line-menu item-1"></div>
           <div class="line-menu item-2"></div>
           <div class="line-menu item-3"></div>
         </button>
         <div class="flex content-navbar">
+          <a href="#home" class="item-navbar">Início</a>
           <a href="#about" class="item-navbar">Sobre</a>
           <a href="#projects" class="item-navbar">Projetos</a>
           <a href="#contact" class="item-navbar">Contato</a>
-          <div class="context-switch">
-            <div class="text-label">Aparência</div>
-            <input type="checkbox" id="theme" />
-            <label for="theme" class="change-color flex">
-              <img
-                alt="Ícone de uma Lua preta"
-                src="./assets/images/switch-theme/moon-vector.svg"
-                width="18"
-                height="20"
-              />
-              <img
-                alt="Ícone de um sol branco"
-                src="./assets/images/switch-theme/sun-vector.svg"
-                width="18"
-                height="18"
-              />
-              <div class="ball"></div>
-            </label>
-          </div>
+        </div>
+        <div class="context-switch flex">
+          <p class="text-label">Aparência</p>
+          <input type="checkbox" id="theme" />
+          <label for="theme" class="change-color flex">
+            <img
+              alt="Ícone de uma Lua preta"
+              src="./assets/images/switch-theme/moon-vector.svg"
+              width="18"
+              height="20"
+            />
+            <img
+              alt="Ícone de um sol branco"
+              src="./assets/images/switch-theme/sun-vector.svg"
+              width="18"
+              height="18"
+            />
+            <div class="ball"></div>
+          </label>
         </div>
       </nav>
       <section class="container">
