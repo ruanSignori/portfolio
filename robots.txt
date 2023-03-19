@@ -1,0 +1,4 @@
+Sitemap: https://ruansignori.tech
+User-agent: *
+Dissallow: robots.txt
+Dissallow: /assets/
