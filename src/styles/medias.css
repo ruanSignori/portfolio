@@ -173,6 +173,11 @@
   #contact > section > .container-form-contact > form > textarea {
     max-width: 26rem;
   }
+
+  footer {
+    flex-direction: column;
+    gap: 1.8rem;
+  }
 }
 
 @media (max-width: 550px) {
