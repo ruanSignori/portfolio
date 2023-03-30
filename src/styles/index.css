@@ -92,6 +92,15 @@ h5 {
   -webkit-text-fill-color: transparent;
 }
 
+.toast {
+  width: 250px;
+  height: 30px;
+  position: fixed;
+  border: 2px solid red;
+  left: 0;
+  justify-content: center;
+}
+
 .page button.button {
   cursor: pointer;
   background-color: var(--text-color_100);
@@ -108,7 +117,7 @@ h5 {
 
 .page .button:hover {
   filter: drop-shadow(0px 0px 3px var(--text-color_100));
-  transition: filter 0.15s ease 0s
+  transition: filter 0.15s ease 0s;
 }
 
 .page > nav {
@@ -611,10 +620,9 @@ h5 {
   > .row-social-cards
   > a
   > svg:hover {
-    filter: drop-shadow(0px 0px 3px var(--text-color_100));
-    transition: filter 0.15s ease 0s
-  
-  }
+  filter: drop-shadow(0px 0px 3px var(--text-color_100));
+  transition: filter 0.15s ease 0s;
+}
 
 #contact
   > section
@@ -679,33 +687,16 @@ h5 {
 
 #contact > section > .container-form-contact > form > .input-field label {
   position: absolute;
+  transform: translate(-10px, -18px);
+  font-size: 0.7em;
   top: 17px;
   left: 18px;
   color: var(--bg-color_400);
   text-transform: uppercase;
   font-family: var(--font-bold);
-  font-size: 0.9em;
   transition: all ease 0.1s;
   letter-spacing: 1px;
   cursor: text;
-}
-
-#contact
-  > section
-  > .container-form-contact
-  > form
-  > .input-field
-  input:valid
-  ~ label,
-#contact
-  > section
-  > .container-form-contact
-  > form
-  > .input-field
-  input:focus
-  ~ label {
-  transform: translate(-10px, -16px);
-  font-size: 0.7em;
 }
 
 #contact > section > .container-form-contact > form > button[type="submit"] {
@@ -721,6 +712,7 @@ h5 {
   > form
   > button[type="submit"]:disabled {
   filter: brightness(0.7);
+  cursor: auto;
 }
 
 footer {
