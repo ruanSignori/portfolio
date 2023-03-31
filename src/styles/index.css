@@ -93,12 +93,45 @@ h5 {
 }
 
 .toast {
-  width: 250px;
-  height: 30px;
+  visibility: hidden;
+  min-width: 250px;
+  height: 50px;
   position: fixed;
-  border: 2px solid red;
-  left: 0;
-  justify-content: center;
+  right: 2rem;
+  bottom: 2rem;
+  background-color: var(--bg-color_100);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  border-radius: 8px;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 2rem 2rem 2rem 1rem;
+  animation: popUp 3s;
+}
+
+@keyframes popUp {
+  0% {
+    visibility: visible;
+    opacity: 0.3;
+    transform: translate(0px, 30px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0px, -70px);
+  }
+}
+
+.toast > div > p:first-child {
+  font-family: var(--font-bold);
+}
+
+.toast > div > p:last-child {
+  font-family: var(--font-regular);
 }
 
 .page button.button {

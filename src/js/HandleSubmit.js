@@ -1,5 +1,9 @@
+import { CreateToast } from "./CreateToast";
+
 const buttonSubmit = document.querySelector('button[type="submit"]');
 const form = document.querySelector("form");
+
+const toast = new CreateToast();
 
 const handleSubmit = async (event) => {
   event.preventDefault();
@@ -25,20 +29,22 @@ const handleSubmit = async (event) => {
       if (response.ok) {
         form.reset();
         buttonSubmit.removeAttribute("disabled");
-        return alert("E-mail enviado");
+        return toast.ok("Sucesso", "E-mail enviado!");
       }
 
       response.json().then((data) => {
         if (Object.hasOwn(data, "errors")) {
           const messageError = data["errors"].map((error) => error["message"]);
 
-          return alert(messageError);
+          return toast.error("Error", messageError);
         }
-        alert("Não foi possível enviar o seu formulário");
+        toast.error("Error", "Não foi possível enviar o seu formulário");
       });
+
+      buttonSubmit.removeAttribute("disabled");
     })
     .catch(() => {
-      alert("Não foi possível enviar o seu formulário");
+      toast.error("Error", "Não foi possível enviar o seu formulário");
     });
 };
 
