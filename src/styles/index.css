@@ -105,7 +105,7 @@ h5 {
   justify-content: flex-start;
   gap: 1rem;
   padding: 2rem 2rem 2rem 1rem;
-  animation: popUp 3s;
+  animation: 4s ease-in popUp 3s;
 }
 
 @keyframes popUp {

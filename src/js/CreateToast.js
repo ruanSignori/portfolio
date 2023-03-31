@@ -1,4 +1,4 @@
-import SucessIcon from "../assets/images/toast/sucess.svg";
+import SuccessIcon from "../assets/images/toast/success.svg";
 import ErrorIcon from "../assets/images/toast/error.svg";
 
 export class CreateToast {
@@ -21,6 +21,6 @@ export class CreateToast {
     this._createToast(ErrorIcon, title, message);
   }
   ok(title, message) {
-    this._createToast(SucessIcon, title, message);
+    this._createToast(SuccessIcon, title, message);
   }
 }
