@@ -1,5 +1,3 @@
-
-
 const buttonSubmit = document.querySelector('button[type="submit"]');
 const form = document.querySelector("form");
 
@@ -25,12 +23,22 @@ const handleSubmit = async (event) => {
   })
     .then((response) => {
       if (response.ok) {
-        alert("E-mail enviado");
         form.reset();
+        buttonSubmit.removeAttribute("disabled");
+        return alert("E-mail enviado");
       }
+
+      response.json().then((data) => {
+        if (Object.hasOwn(data, "errors")) {
+          const messageError = data["errors"].map((error) => error["message"]);
+
+          return alert(messageError);
+        }
+        alert("Não foi possível enviar o seu formulário");
+      });
     })
-    .catch((error) => {
-      alert("Oops! There was a problem submitting your form");
+    .catch(() => {
+      alert("Não foi possível enviar o seu formulário");
     });
 };
 
