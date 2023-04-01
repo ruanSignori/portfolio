@@ -105,7 +105,7 @@ h5 {
   justify-content: flex-start;
   gap: 1rem;
   padding: 2rem 2rem 2rem 1rem;
-  animation: 4s ease-in popUp 3s;
+  animation: popUp 4s ease-in-out; 
 }
 
 @keyframes popUp {
@@ -115,9 +115,22 @@ h5 {
     transform: translate(0px, 30px);
   }
 
+  20% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    animation-duration: 5s;
+  }
+
   50% {
     opacity: 1;
     transform: translate(0px, 0px);
+    animation-duration: 5s;
+  }
+
+  80% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    animation-duration: 5s;
   }
 
   100% {
