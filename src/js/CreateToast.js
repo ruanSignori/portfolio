@@ -17,10 +17,10 @@ export class CreateToast {
 
     body.appendChild(toastElement);
   }
-  error(title, message) {
-    this._createToast(ErrorIcon, title, message);
+  error(message) {
+    this._createToast(ErrorIcon, 'Erro', message);
   }
-  ok(title, message) {
-    this._createToast(SuccessIcon, title, message);
+  ok(message) {
+    this._createToast(SuccessIcon, 'Sucesso', message);
   }
 }

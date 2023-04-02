@@ -32,7 +32,7 @@ const handleSubmit = (event) => {
       if (response.ok) {
         form.reset();
         buttonSubmit.removeAttribute("disabled");
-        return toast.ok("Sucesso", "E-mail enviado!");
+        return toast.ok("E-mail enviado!");
       }
 
       // Se acontecer algum erro que não está previsto, vai cair no tratamento de erro.
@@ -40,16 +40,16 @@ const handleSubmit = (event) => {
         if (Object.hasOwn(data, "errors")) {
           const messageError = data["errors"].map((error) => error["message"]);
 
-          return toast.error("Error", messageError);
+          return toast.error(messageError);
         }
         form.requestSubmit();
-        toast.error("Error", "Não foi possível enviar o seu formulário");
+        toast.error("Não foi possível enviar o seu formulário");
       });
 
       buttonSubmit.removeAttribute("disabled");
     })
     .catch(() => {
-      toast.error("Error", "Não foi possível enviar o seu formulário");
+      toast.error("Não foi possível enviar o seu formulário");
     });
 };
 
