@@ -5,7 +5,7 @@ const form = document.querySelector("form");
 
 const toast = new CreateToast();
 
-const handleSubmit = async (event) => {
+const handleSubmit = (event) => {
   event.preventDefault();
   buttonSubmit.setAttribute("disabled", "true");
 
