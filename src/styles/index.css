@@ -1,22 +1,8 @@
-@font-face {
-  font-family: "Poppins_regular";
-  src: url(../assets/fonts/Poppins-Regular.ttf);
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins_bold";
-  src: url(../assets/fonts/Poppins-Bold.ttf);
-  font-weight: 700;
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
-  --font-regular: Poppins_regular, Arial, sans-serif;
-  --font-bold: Poppins_bold, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  --font-IBM-Plex-Mono: "IBM Plex Mono", monospace, Arial, sans-serif;
+  --font-Ubuntu: "Ubuntu", Arial, sans-serif;
 
   color-scheme: light dark;
 
@@ -34,21 +20,32 @@
   border: 0;
   box-sizing: border-box;
 }
+.max-width {
+  margin: auto;
+  max-width: 1470px;
+}
 
 .page {
+  min-height: 100vh;
   background-color: var(--bg-color_100);
   transition: background-color ease 0.2s;
-  font-family: var(--font-regular);
-  min-height: 100vh;
+  font-family: var(--font-IBM-Plex-Mono);
+  width: 100%;
+  padding: 0 3rem;
 }
 
 .flex {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 a {
   text-decoration: none;
+}
+
+.no-overflow {
+  overflow-y: hidden;
 }
 
 h2 {
@@ -58,6 +55,15 @@ h2 {
   color: var(--text-color_100);
 }
 
+.active {
+  display: flex !important;
+}
+
+.inactive {
+  display: none;
+}
+
+/* Estilos para os cards de Skills*/
 .hidden-element {
   opacity: 0;
   transform: scale(0.7);
@@ -86,7 +92,7 @@ h5 {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(#b429f9, #26c5f3);
+  background: -webkit-linear-gradient(45deg, #01a9f2, #787dff, #18d3dc);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -105,7 +111,7 @@ h5 {
   justify-content: flex-start;
   gap: 1rem;
   padding: 2rem 2rem 2rem 1rem;
-  animation: popUp 4s ease-in-out; 
+  animation: popUp 4s ease-in-out;
 }
 
 @keyframes popUp {
@@ -140,84 +146,80 @@ h5 {
 }
 
 .toast > div > p:first-child {
-  font-family: var(--font-bold);
+  font-family: var(--font-Ubuntu);
 }
 
 .toast > div > p:last-child {
-  font-family: var(--font-regular);
+  font-family: var(--font-IBM-Plex-Mono);
 }
 
-.page button.button {
+.btn {
   cursor: pointer;
-  background-color: var(--text-color_100);
-  color: var(--bg-color_100);
-  font-family: var(--font-regular);
-  border-radius: 0.3rem;
-  padding: 0.3rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-family: var(--font-Ubuntu);
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
-.page button.button:focus {
+.btn-dark {
+  background-color: #171717;
+  color: #e5e7eb;
+}
+
+.btn-primary {
+  background-color: turquoise;
+  color: #1f2937;
+}
+
+.btn:focus {
   box-shadow: rgba(0, 119, 255, 0.3) 0px 0px 0px 3px;
 }
 
-.page .button:hover {
+.btn:hover {
   filter: drop-shadow(0px 0px 3px var(--text-color_100));
   transition: filter 0.15s ease 0s;
 }
 
-.page > nav {
+nav {
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
   width: 100%;
-  height: 8vh;
-  padding: 1.5rem 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+  padding: 0.8rem 3rem;
 
-  -webkit-backdrop-filter: saturate(50%) blur(8px);
-  backdrop-filter: saturate(50%) blur(8px);
-  background: var(--bg-color-transparent);
   position: fixed;
   top: 0;
   z-index: 99;
+
+  font-family: var(--font-Ubuntu);
+  font-weight: 500;
 }
 
-.page > nav > div.flex {
+nav div.flex {
   justify-content: space-between;
+  gap: 1.5rem;
 }
 
-.page > nav .item-navbar {
+nav .item-navbar {
   color: var(--text-color_100);
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
-.page > nav div.content-navbar {
+nav div.content-navbar {
   transition: all ease 0.4s;
 }
 
-.page > nav > div > a {
-  margin: 0 2rem;
-  letter-spacing: 0.1rem;
-}
-
-.page > nav .context-switch {
+nav .context-switch {
   justify-content: space-between;
   gap: 0.8rem;
 }
 
-.page > nav .context-switch input {
+nav .context-switch input {
   display: none;
-}
-
-.page > nav div.onVisibility {
-  display: flex !important;
-  justify-content: flex-start;
-  opacity: 1 !important;
-  height: 92vh;
-  background-color: var(--bg-color_100) !important;
-  transition: animation 0.4s ease;
-  animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
@@ -230,7 +232,7 @@ h5 {
   }
 }
 
-.page > nav .context-switch label.change-color {
+nav .context-switch label.change-color {
   width: 3.8rem;
   height: 1.9rem;
   border-radius: 3rem;
@@ -244,7 +246,7 @@ h5 {
   user-select: none;
 }
 
-.page > nav .context-switch label.change-color .ball {
+nav .context-switch label.change-color .ball {
   width: 1.4rem;
   height: 1.4rem;
   background-color: var(--bg-color_100);
@@ -257,89 +259,84 @@ h5 {
   transition: transform 0.2s ease-in-out;
 }
 
-.page > nav .context-switch input:checked + label.change-color > .ball {
+nav .context-switch input:checked + label.change-color > .ball {
   transform: translateX(2.1rem);
 }
 
-.page > nav button.menu {
+button.menu {
+  padding: 0.5rem;
   display: none;
   cursor: pointer;
   border-radius: 0.3rem;
   background-color: transparent;
+  color: #374151;
+  transition: background-color, ease 0.3s;
 }
 
-.page > nav button.menu .line-menu {
-  border-radius: 0.2rem;
-  margin: 0.3rem;
-  background-color: var(--text-color_100);
-  width: 1.5rem;
-  height: 0.2rem;
-  transform: scale(1.1);
-  transition: all ease-in 0.1s;
+button.menu:hover {
+  background-color: #eaeaea;
 }
 
-.page > section.container {
-  max-width: 100%;
-  min-height: 100vh;
+button.menu:focus {
+  outline: 2px solid turquoise;
+}
+
+button.menu i {
+  font-size: 2em;
+}
+
+section.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 5rem;
-  padding: 0 10rem;
 }
 
-.page > section > div {
-  flex: 1 1 450px;
+.section-hero {
+  flex-wrap: wrap;
 }
 
-.page > section.container .content-presentation {
+.section-hero > div {
+  flex: 1 1 650px;
+}
+
+.page .flex {
+  justify-content: space-between;
+}
+
+section.container .content-presentation {
+  max-width: 55%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
-.page > section.container .content-presentation .title {
-  font-family: var(--font-bold);
+section.container .content-presentation .title {
+  font-family: var(--font-Ubuntu);
   font-weight: 700;
-  font-size: 3.5em;
+  font-size: 3.7em;
   line-height: 5rem;
   color: var(--text-color_100);
 }
 
-.page > section.container .content-presentation .subtitle {
-  color: var(--text-color_200);
-  font-size: 1.2rem;
-  line-height: 2rem;
+section.container .content-presentation .subtitle {
+  color: #374151;
+  font-weight: 500;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  line-height: 42px;
 }
 
-.page > section.container .content-presentation a {
-  width: 10rem;
+section.container .content-presentation > div {
+  justify-content: flex-start;
+  gap: 2rem;
 }
 
-.page > section.container .content-presentation button {
-  width: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.8rem !important;
-  font-size: 1.1rem;
+section.container .content-img {
+  max-width: 45%;
 }
 
-.page > section.container .content-presentation button p {
-  color: var(--bg-color_200);
-}
-
-.page > section.container .content-presentation button > svg {
-  user-select: none;
-}
-
-.page > section.container .content-presentation button > svg > path {
-  fill: var(--bg-color_100);
-}
-
-.page > section.container .content-img > img {
+section.container .content-img > img {
   margin: auto;
   display: block;
   max-width: 100%;
@@ -360,12 +357,12 @@ h5 {
   color: var(--text-color_200);
 }
 
-.page > article {
+article {
   flex-direction: column;
   justify-content: space-around;
 }
 
-.page > article > .container-about {
+article > .container-about {
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
@@ -374,12 +371,12 @@ h5 {
   padding: 2.3rem;
 }
 
-.page > article > .container-about > .children-container {
+article > .container-about > .children-container {
   flex-wrap: wrap;
   gap: 8rem;
 }
 
-.page > article > .container-about > .children-container .content-about {
+article > .container-about > .children-container .content-about {
   align-self: flex-start;
   flex: 1 1 300px;
   flex-direction: column;
@@ -397,7 +394,7 @@ h5 {
   gap: 1rem;
 }
 
-.page > article > .container-about .line {
+article > .container-about .line {
   display: block;
   width: 20rem;
   height: 2px;
@@ -409,26 +406,26 @@ h5 {
   padding: 5rem 3rem;
 }
 
-.page > .content-skills {
+.content-skills {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 5rem;
 }
 
-.page > .content-skills > div.flex {
+.content-skills > div.flex {
   display: grid;
   place-items: center;
   overflow: hidden;
 }
 
-.page > .content-skills > div > .parent-slider {
+.content-skills > div > .parent-slider {
   height: 42rem;
   position: relative;
   user-select: none;
 }
 
-.page > .content-skills > div > .parent-slider .card {
+.content-skills > div > .parent-slider .card {
   width: 18rem;
   height: 30rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -459,36 +456,36 @@ h5 {
   gap: 2rem;
 }
 
-.page > .content-skills > div > .parent-slider > .card > .title-card {
+.content-skills > div > .parent-slider > .card > .title-card {
   color: var(--text-color_100);
-  font-family: var(--font-bold);
+  font-family: var(--font-Ubuntu);
   font-size: 1.1em;
 }
 
-.page > .content-skills > div > .parent-slider > .card > .content-card {
+.content-skills > div > .parent-slider > .card > .content-card {
   color: var(--text-color_200);
   line-height: 24px;
 }
 
-.page > .content-skills > div > .parent-slider .card.active {
+.content-skills > div > .parent-slider .card.active {
   opacity: 1;
   z-index: 95;
   box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
 }
 
-.page > .content-skills > div > .parent-slider .card.prev {
+.content-skills > div > .parent-slider .card.prev {
   z-index: 2;
   opacity: 0.25;
   transform: translate(-125%, -50%);
 }
 
-.page > .content-skills > div > .parent-slider .card.next {
+.content-skills > div > .parent-slider .card.next {
   z-index: 2;
   opacity: 0.25;
   transform: translate(25%, -50%);
 }
 
-.page > .content-skills > div > .parent-slider .button-container {
+.content-skills > div > .parent-slider .btn-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -497,28 +494,18 @@ h5 {
   z-index: 95;
 }
 
-.page > .content-skills > div > .parent-slider .button-container > .button {
+.content-skills > div > .parent-slider .btn-container > .btn {
   cursor: pointer;
   position: relative;
   opacity: 0.75;
   transition: all 300ms ease-in-out;
 }
 
-.page
-  > .content-skills
-  > div
-  > .parent-slider
-  > .button-container
-  > .button:hover {
+.page > .content-skills > div > .parent-slider > .btn-container > .btn:hover {
   opacity: 1;
 }
 
-.page
-  > .content-skills
-  > div
-  > .parent-slider
-  > .button-container
-  > .button::before {
+.page > .content-skills > div > .parent-slider > .btn-container > .btn::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -537,8 +524,8 @@ h5 {
   > .content-skills
   > div
   > .parent-slider
-  > .button-container
-  > .button:nth-child(1) {
+  > .btn-container
+  > .btn:nth-child(1) {
   float: left;
 }
 
@@ -546,8 +533,8 @@ h5 {
   > .content-skills
   > div
   > .parent-slider
-  > .button-container
-  > .button:nth-child(2) {
+  > .btn-container
+  > .btn:nth-child(2) {
   float: right;
 }
 
@@ -588,7 +575,7 @@ h5 {
 
 #projects > section > .container-projects > .card-project > :nth-child(1) {
   font-size: 1.4em;
-  font-family: var(--font-bold);
+  font-family: var(--font-Ubuntu);
 }
 
 #projects > section > .container-projects > .card-project > .description {
@@ -739,7 +726,7 @@ h5 {
   left: 18px;
   color: var(--bg-color_400);
   text-transform: uppercase;
-  font-family: var(--font-bold);
+  font-family: var(--font-Ubuntu);
   transition: all ease 0.1s;
   letter-spacing: 1px;
   cursor: text;
@@ -771,5 +758,5 @@ footer {
 }
 
 footer > p {
-  font-family: var(--font-regular);
+  font-family: var(--font-IBM-Plex-Mono);
 }

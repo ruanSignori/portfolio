@@ -1,9 +1,15 @@
+import "@phosphor-icons/web/bold";
+
 import "./ChangeTheme";
-import "./ResponsiveNavbar";
+import { HandleResponsiveNavbar } from "./ResponsiveNavbar";
 import "./Slider";
 import "./AnimationScroll";
+import "./OnScroll";
 import "./InsertContentCard";
 import "./HandleSubmit";
 
 import "../styles/index.css";
 import "../styles/medias.css";
+
+const client = new HandleResponsiveNavbar();
+client.observer();

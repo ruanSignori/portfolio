@@ -1,54 +1,50 @@
-const buttonOpenMenu = document.querySelector("#home > nav > button.menu");
-const bodyElement = document.querySelector("body");
-const modal = document.querySelector("#home > nav > div.content-navbar");
-const linkRef = document.querySelectorAll(
-  "#home > nav > div.content-navbar > .item-navbar"
-);
-const switchThemeElement = document.querySelector(
-  "#home > nav > .context-switch"
-);
-let modalIsOpen = false;
+export class HandleResponsiveNavbar {
+  #btnMenu = document.querySelector("nav button.menu");
+  #bodyElement = document.querySelector("body");
+  #modal = document.querySelector("nav div.content-navbar");
+  #linkRef = document.querySelectorAll(".link");
+  #modalIsOpen = this.#modal.classList.contains("active");
 
-const showModal = () => {
-  modal.classList.add("onVisibility");
-  buttonOpenMenu.classList.add("active");
-  modal.appendChild(switchThemeElement);
-};
-
-const hiddenModal = () => {
-  modal.classList.remove("onVisibility");
-  buttonOpenMenu.classList.remove("active");
-};
-
-// Para cada link que for clicado no modal
-// Irá remover as propriedades de overflow do body, e esconder o modal
-linkRef.forEach((element) => {
-  element.addEventListener("click", () => {
-    hiddenModal();
-    bodyElement.style.removeProperty("overflow");
-    modalIsOpen = false;
-  });
-});
-
-// Se o tamanho da janela for maior que 1.200px e o menu estiver aberto
-// ele será removido do DOM
-window.addEventListener("resize", () => {
-  const checkMinWidth = window.matchMedia("(min-width: 1200px)").matches;
-  const checkIfTheElementHasAClass = modal.classList.contains("onVisibility");
-
-  if (checkMinWidth && checkIfTheElementHasAClass) {
-    hiddenModal();
-    bodyElement.style.removeProperty("overflow");
+  observer() {
+    this.removeModalIfResizedWindow();
+    this.observerIfButtonHasClicked();
+    this.closeModalIfLinkOnClick();
   }
-});
 
-// Funcionalidade de ao clicar no botão, abrir o modal
-buttonOpenMenu.addEventListener("click", () => {
-  modalIsOpen ? (modalIsOpen = false) : (modalIsOpen = true);
+  /**Verifica se o modal já está aberto ou fechado, então renderiza ou remove o elemento */
+  #handleModalOpeningAndClose() {
+    this.#modal.classList.toggle("active");
+    this.#btnMenu.children[0].classList.toggle("active");
+    this.#modalIsOpen = !this.#modalIsOpen;
+    this.#bodyElement.classList.toggle("no-overflow");
+  }
 
-  modalIsOpen ? showModal() : hiddenModal();
+  /**Verifica se o Botão de abrir o menu na Navbar é clicado, para disparar o evento de #handleModalOpeningAndClose()  */
+  observerIfButtonHasClicked() {
+    this.#btnMenu.addEventListener("click", () => {
+      this.#handleModalOpeningAndClose();
+    });
+  }
 
-  modal.classList.contains("onVisibility")
-    ? (bodyElement.style.overflow = "hidden")
-    : bodyElement.style.removeProperty("overflow");
-});
+  /** Se o tamanho da janela for maior que 1.200px e o menu estiver aberto ele será removido do DOM */
+  removeModalIfResizedWindow() {
+    window.addEventListener("resize", () => {
+      const checkMinWidth = window.matchMedia("(min-width: 1200px)").matches;
+
+      if (checkMinWidth && this.#modalIsOpen) {
+        this.#handleModalOpeningAndClose();
+      }
+    });
+  }
+
+  /**Se clicado em algum link que tenha a classe "item-navbar", será direcionado e o modal vai ser fechado */
+  closeModalIfLinkOnClick() {
+    this.#linkRef.forEach((element) => {
+      element.addEventListener("click", () => {
+        if (this.#modalIsOpen) {
+          this.#handleModalOpeningAndClose();
+        }
+      });
+    });
+  }
+}
