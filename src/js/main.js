@@ -4,7 +4,6 @@ import "./ChangeTheme";
 import { HandleResponsiveNavbar } from "./ResponsiveNavbar";
 import "./Slider";
 import "./AnimationScroll";
-import "./OnScroll";
 import "./InsertContentCard";
 import "./HandleSubmit";
 

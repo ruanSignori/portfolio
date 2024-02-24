@@ -22,11 +22,11 @@
 }
 .max-width {
   margin: auto;
-  max-width: 1470px;
+  max-width: 1450px;
 }
 
 .page {
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: var(--bg-color_100);
   transition: background-color ease 0.2s;
   font-family: var(--font-IBM-Plex-Mono);
@@ -160,6 +160,8 @@ h5 {
   border-radius: 12px;
   padding: 0.9rem 1rem;
 
+  text-align: center;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -287,31 +289,24 @@ button.menu i {
 
 section.container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 5rem;
 }
 
-.section-hero {
-  flex-wrap: wrap;
-}
-
-.section-hero > div {
-  flex: 1 1 650px;
-}
-
-.page .flex {
-  justify-content: space-between;
+section.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 section.container .content-presentation {
-  max-width: 55%;
-  display: flex;
+  max-width: 800px;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-section.container .content-presentation .title {
+section.container .title {
   font-family: var(--font-Ubuntu);
   font-weight: 700;
   font-size: 3.7em;
@@ -319,7 +314,7 @@ section.container .content-presentation .title {
   color: var(--text-color_100);
 }
 
-section.container .content-presentation .subtitle {
+section.container .subtitle {
   color: #374151;
   font-weight: 500;
   font-size: 1.2em;
@@ -327,19 +322,8 @@ section.container .content-presentation .subtitle {
   line-height: 42px;
 }
 
-section.container .content-presentation > div {
-  justify-content: flex-start;
-  gap: 2rem;
-}
-
-section.container .content-img {
-  max-width: 45%;
-}
-
-section.container .content-img > img {
-  margin: auto;
-  display: block;
-  max-width: 100%;
+section.container .group-buttons {
+  gap: 1rem;
 }
 
 .page#about {
@@ -675,6 +659,7 @@ article > .container-about .line {
 }
 
 #contact > section > .container-form-contact > form {
+  align-items: flex-start;
   flex-direction: column;
   gap: 1.2rem;
 }
@@ -730,13 +715,6 @@ article > .container-about .line {
   transition: all ease 0.1s;
   letter-spacing: 1px;
   cursor: text;
-}
-
-#contact > section > .container-form-contact > form > button[type="submit"] {
-  width: 7rem;
-  height: 2.5rem;
-  font-size: 1em;
-  align-self: flex-start;
 }
 
 #contact
