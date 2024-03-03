@@ -1,0 +1,105 @@
+nav {
+  background-color: #f9fafb;
+  width: 100%;
+  padding: 0.8rem 3rem;
+
+  position: fixed;
+  top: 0;
+  z-index: 99;
+
+  font-family: var(--font-Ubuntu);
+  font-weight: 500;
+
+  box-shadow: var(--shadow-black);
+}
+
+nav div.flex {
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+nav .item-navbar {
+  color: var(--text-color_100);
+  font-size: 1em;
+}
+
+nav div.content-navbar {
+  transition: all ease 0.4s;
+}
+
+nav .context-switch {
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+nav .context-switch input {
+  display: none;
+}
+
+nav .context-switch label.change-color {
+  width: 3rem;
+  height: 1.6rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  background-color: #D9DADC;
+  padding: 0.3rem;
+  position: relative;
+  justify-content: space-between;
+
+  user-select: none;
+}
+
+nav .context-switch label.change-color .ball {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #F9FAFB;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+
+  transform: translateX(0px);
+  transition: transform 0.2s ease-in-out;
+
+  box-shadow: var(--shadow-black);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav label.change-color .ball .icon-sun,
+nav .context-switch input:checked + label.change-color > .ball .icon-moon
+ {
+  display: none;
+}
+
+nav .context-switch input:checked + label.change-color > .ball .icon-sun {
+  display: block;
+}
+
+nav .context-switch input:checked + label.change-color > .ball {
+  transform: translateX(1.4rem);
+}
+
+button.menu {
+  padding: 0.5rem;
+  display: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  color: #374151;
+  transition: background-color, ease 0.3s;
+}
+
+button.menu:hover {
+  background-color: #eaeaea;
+}
+
+button.menu:focus {
+  outline: 2px solid turquoise;
+}
+
+button.menu i {
+  font-size: 2em;
+}

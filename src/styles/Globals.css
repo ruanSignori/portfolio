@@ -1,0 +1,106 @@
+.max-width {
+  margin: auto;
+  max-width: 1450px;
+}
+
+.page {
+  min-height: 80vh;
+  background-color: var(--bg-color_100);
+  transition: background-color ease 0.2s;
+  font-family: var(--font-IBM-Plex-Mono);
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin: auto;
+  font-size: 2.8em;
+  display: block;
+  color: var(--text-color_100);
+}
+
+.active {
+  display: flex !important;
+}
+
+.inactive {
+  display: none;
+}
+
+.icon-no-color {
+  color: #D9DADC;
+}
+
+/* Classe utilizada para os cards e animações do IntersectionObserver */
+.hidden-element {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: transform 0.3s, opacity 0.5s ease-in-out;
+}
+
+.show-element {
+  opacity: 1;
+  transform: scale(1);
+}
+/* Fim das Classes*/
+
+p,
+strong,
+h3,
+h4,
+h5 {
+  color: var(--text-color_200);
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(45deg, #01a9f2, #787dff, #18d3dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Estilos para botão*/
+.btn {
+  cursor: pointer;
+  font-family: var(--font-Ubuntu);
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-dark {
+  background-color: #171717;
+  color: #e5e7eb;
+}
+
+.btn-primary {
+  background-color: turquoise;
+  color: #1f2937;
+}
+
+.btn:focus {
+  box-shadow: rgba(0, 119, 255, 0.3) 0px 0px 0px 3px;
+}
+
+.btn:hover {
+  filter: drop-shadow(0px 0px 3px var(--text-color_100));
+  transition: filter 0.15s ease 0s;
+}
+/* Fim de estilos de botão */

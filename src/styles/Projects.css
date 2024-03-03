@@ -1,0 +1,72 @@
+#projects {
+  padding: 5rem 2rem;
+  background-color: var(--bg-color_0);
+  justify-content: center;
+  min-height: 50vh !important;
+}
+
+#projects > section {
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#projects > section > .container-projects {
+  max-width: 80rem;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#projects > section > .container-projects > .card-project {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 25rem;
+  min-height: 14.5rem;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  border: 2px solid;
+  border-color: var(--bg-color_300);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#projects > section > .container-projects > .card-project > :nth-child(1) {
+  font-size: 1.4em;
+  font-family: var(--font-Ubuntu);
+}
+
+#projects > section > .container-projects > .card-project > .description {
+  font-size: 1.1em;
+}
+
+#projects > section > .container-projects > .card-project > a {
+  font-size: 1.1em;
+  color: var(--text-color_100);
+  background-image: linear-gradient(
+    to right,
+    #b429f9,
+    #26c5f3,
+    var(--text-color_100) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+#projects > section > .container-projects > .card-project a:hover {
+  background-position: 0;
+}
+
+#projects > section > a {
+  margin: auto;
+  color: var(--bg-color_200);
+  background-color: var(--text-color_100);
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+}

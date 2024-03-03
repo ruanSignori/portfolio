@@ -1,0 +1,41 @@
+
+@keyframes popUp {
+  0% {
+    visibility: visible;
+    opacity: 0.3;
+    transform: translate(0px, 30px);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    animation-duration: 5s;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    animation-duration: 5s;
+  }
+
+  80% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    animation-duration: 5s;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0px, -70px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

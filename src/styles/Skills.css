@@ -1,0 +1,135 @@
+.page#skills {
+  padding: 5rem 3rem;
+}
+
+.content-skills {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.content-skills > div.flex {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.content-skills > div > .parent-slider {
+  height: 42rem;
+  position: relative;
+  user-select: none;
+}
+
+.content-skills > div > .parent-slider .card {
+  width: 18rem;
+  height: 30rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border: 1px solid var(--bg-color_200);
+  border-radius: 0.8rem;
+  background-image: linear-gradient(
+    320deg,
+    var(--bg-color_100),
+    var(--bg-color_200)
+  );
+  -webkit-backdrop-filter: saturate(50%) blur(8px);
+  backdrop-filter: saturate(50%) blur(8px);
+  padding: 2rem 1.5rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  opacity: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-skills > div > .parent-slider > .card > .title-card {
+  color: var(--text-color_100);
+  font-family: var(--font-Ubuntu);
+  font-size: 1.1em;
+}
+
+.content-skills > div > .parent-slider > .card > .content-card {
+  color: var(--text-color_200);
+  line-height: 24px;
+}
+
+.content-skills > div > .parent-slider .card.active {
+  opacity: 1;
+  z-index: 95;
+  box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.content-skills > div > .parent-slider .card.prev {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(-125%, -50%);
+}
+
+.content-skills > div > .parent-slider .card.next {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(25%, -50%);
+}
+
+.content-skills > div > .parent-slider .btn-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  z-index: 95;
+}
+
+.content-skills > div > .parent-slider .btn-container > .btn {
+  cursor: pointer;
+  position: relative;
+  opacity: 0.75;
+  transition: all 300ms ease-in-out;
+}
+
+.page > .content-skills > div > .parent-slider > .btn-container > .btn:hover {
+  opacity: 1;
+}
+
+.page > .content-skills > div > .parent-slider > .btn-container > .btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 1);
+  -webkit-backdrop-filter: saturate(50%) blur(8px);
+  backdrop-filter: saturate(50%) blur(8px);
+  z-index: -96;
+}
+
+.page
+  > .content-skills
+  > div
+  > .parent-slider
+  > .btn-container
+  > .btn:nth-child(1) {
+  float: left;
+}
+
+.page
+  > .content-skills
+  > div
+  > .parent-slider
+  > .btn-container
+  > .btn:nth-child(2) {
+  float: right;
+}

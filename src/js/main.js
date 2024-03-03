@@ -8,7 +8,6 @@ import "./InsertContentCard";
 import "./HandleSubmit";
 
 import "../styles/index.css";
-import "../styles/medias.css";
 
 const client = new HandleResponsiveNavbar();
 client.observer();

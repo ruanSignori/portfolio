@@ -1,0 +1,12 @@
+footer {
+  min-height: 10vh;
+  background-color: var(--bg-color_0);
+  padding: 2rem 2rem;
+
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+footer > p {
+  font-family: var(--font-IBM-Plex-Mono);
+}
