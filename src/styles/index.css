@@ -4,6 +4,8 @@
   --font-IBM-Plex-Mono: "IBM Plex Mono", monospace, Arial, sans-serif;
   --font-Ubuntu: "Ubuntu", Arial, sans-serif;
 
+  --shadow-black: 0px 4px 18px 1px rgba(0, 0, 0, 0.2);;
+
   color-scheme: light dark;
 
   font-synthesis: none;
@@ -189,7 +191,6 @@ h5 {
 
 nav {
   background-color: #f9fafb;
-  border-bottom: 2px solid #e5e7eb;
   width: 100%;
   padding: 0.8rem 3rem;
 
@@ -199,6 +200,8 @@ nav {
 
   font-family: var(--font-Ubuntu);
   font-weight: 500;
+
+  box-shadow: var(--shadow-black);
 }
 
 nav div.flex {
