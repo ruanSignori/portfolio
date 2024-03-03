@@ -8,27 +8,25 @@ const changeProperty = (property, value) => {
 };
 
 const changeTheme = (theme) => {
-  theme === darkTheme ? 
-    localStorage.setItem('theme', 'dark') : 
-    localStorage.setItem('theme', 'light');
+  theme === lightTheme
+    ? localStorage.setItem("theme", "light")
+    : localStorage.setItem("theme", "dark");
 
   for (let prop in theme) {
     changeProperty(prop, theme[prop]);
-  };
+  }
 };
 
-const getThemeLocalStorage = localStorage.getItem('theme');
-const inputChangeTheme = document.querySelector('input#theme');
+const getThemeLocalStorage = localStorage.getItem("theme");
+getThemeLocalStorage === "light"
+  ? changeTheme(lightTheme)
+  : changeTheme(darkTheme);
 
-if (getThemeLocalStorage === 'light') {
-  changeTheme(lightTheme);
-} else {
-  inputChangeTheme.checked = true;
-  changeTheme(darkTheme);
-};
-
-inputChangeTheme.addEventListener('change', () => {
+const inputChangeTheme = document.querySelector("input#theme");
+inputChangeTheme.addEventListener("change", () => {
   const switchIsChecked = inputChangeTheme.checked;
-  
-  switchIsChecked ? changeTheme(darkTheme) : changeTheme(lightTheme);
+
+  console.log(switchIsChecked);
+
+  switchIsChecked ? changeTheme(lightTheme) : changeTheme(darkTheme);
 });
