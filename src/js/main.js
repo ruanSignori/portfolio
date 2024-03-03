@@ -9,5 +9,4 @@ import "./HandleSubmit";
 
 import "../styles/index.css";
 
-const client = new HandleResponsiveNavbar();
-client.observer();
+new HandleResponsiveNavbar().observer();
