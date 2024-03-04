@@ -6,9 +6,9 @@ export class HandleResponsiveNavbar {
   #modalIsOpen = this.#modal.classList.contains("active");
 
   observer() {
-    this.removeModalIfResizedWindow();
-    this.observerIfButtonHasClicked();
-    this.closeModalIfLinkOnClick();
+    this.#removeModalIfResizedWindow();
+    this.#observerIfButtonHasClicked();
+    this.#closeModalIfLinkOnClick();
   }
 
   /**Verifica se o modal já está aberto ou fechado, então renderiza ou remove o elemento */
@@ -20,14 +20,14 @@ export class HandleResponsiveNavbar {
   }
 
   /**Verifica se o Botão de abrir o menu na Navbar é clicado, para disparar o evento de #handleModalOpeningAndClose()  */
-  observerIfButtonHasClicked() {
+  #observerIfButtonHasClicked() {
     this.#btnMenu.addEventListener("click", () => {
       this.#handleModalOpeningAndClose();
     });
   }
 
   /** Se o tamanho da janela for maior que 1.200px e o menu estiver aberto ele será removido do DOM */
-  removeModalIfResizedWindow() {
+  #removeModalIfResizedWindow() {
     window.addEventListener("resize", () => {
       const checkMinWidth = window.matchMedia("(min-width: 1200px)").matches;
 
@@ -38,7 +38,7 @@ export class HandleResponsiveNavbar {
   }
 
   /**Se clicado em algum link que tenha a classe "item-navbar", será direcionado e o modal vai ser fechado */
-  closeModalIfLinkOnClick() {
+  #closeModalIfLinkOnClick() {
     this.#linkRef.forEach((element) => {
       element.addEventListener("click", () => {
         if (this.#modalIsOpen) {

@@ -26,7 +26,5 @@ const inputChangeTheme = document.querySelector("input#theme");
 inputChangeTheme.addEventListener("change", () => {
   const switchIsChecked = inputChangeTheme.checked;
 
-  console.log(switchIsChecked);
-
   switchIsChecked ? changeTheme(lightTheme) : changeTheme(darkTheme);
 });

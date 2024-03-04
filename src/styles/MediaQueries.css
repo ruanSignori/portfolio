@@ -24,22 +24,27 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 92vh;
+    height: 93vh;
 
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 3rem;
-    background-color: #eeeeee;
-    padding: 1rem 2rem;
-    top: 60.7px; /*Nav Height*/
+    background-color: #F9FAFB;
+    padding: 2rem;
+    text-align: center;
+    top: 58.5px; /*Nav Height*/
   }
 
   nav div.content-navbar a {
     font-size: 0.9em;
     padding: 0.2rem;
     width: 100%;
-    border-bottom: 2px solid #d6d7da;
+  }
+
+  nav .context-switch::before,
+  nav .context-switch::after {
+    content: none !important;
   }
 
   nav button.menu {

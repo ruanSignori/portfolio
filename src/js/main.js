@@ -6,7 +6,6 @@ import "./Slider";
 import "./AnimationScroll";
 import "./InsertContentCard";
 import "./HandleSubmit";
-
 import "../styles/index.css";
 
 new HandleResponsiveNavbar().observer();
