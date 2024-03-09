@@ -18,7 +18,8 @@
   --font-IBM-Plex-Mono: "IBM Plex Mono", monospace, Arial, sans-serif;
   --font-Ubuntu: "Ubuntu", Arial, sans-serif;
 
-  --shadow-black: 0px 4px 18px 1px rgba(0, 0, 0, 0.2);;
+  --shadow-black: 0px 4px 18px 1px rgba(0, 0, 0, 0.2);
+  --gradient-main-color: linear-gradient(90deg, #00DDB3 34.27%, #01F27E 69.36%);
 
   color-scheme: light dark;
 

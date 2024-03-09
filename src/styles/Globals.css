@@ -7,7 +7,6 @@
   min-height: 80vh;
   background-color: var(--bg-color_100);
   transition: background-color ease 0.2s;
-  font-family: var(--font-IBM-Plex-Mono);
   width: 100%;
   padding: 0 3rem;
 }
@@ -63,7 +62,7 @@ h5 {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(45deg, #01a9f2, #787dff, #18d3dc);
+  background: var(--gradient-main-color);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

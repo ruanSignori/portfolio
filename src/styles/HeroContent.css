@@ -1,3 +1,10 @@
+#home {
+  background-image: url("../assets/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 section.container {
   display: flex;
   justify-content: center;
@@ -5,6 +12,7 @@ section.container {
   text-align: center;
   align-items: center;
   gap: 5rem;
+  margin-top: 10rem;
 }
 
 section.container .content-presentation {
@@ -22,6 +30,7 @@ section.container .title {
 }
 
 section.container .subtitle {
+  max-width: 600px;
   color: #374151;
   font-weight: 500;
   font-size: 1.2em;
