@@ -62,11 +62,3 @@
 #projects > section > .container-projects > .card-project a:hover {
   background-position: 0;
 }
-
-#projects > section > a {
-  margin: auto;
-  color: var(--bg-color_200);
-  background-color: var(--text-color_100);
-  padding: 0.7rem;
-  border-radius: 0.4rem;
-}
