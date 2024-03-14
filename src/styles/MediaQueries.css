@@ -51,6 +51,11 @@
     display: block;
   }
 
+  #home .content-presentation .title {
+    font-size: 3.5em;
+    line-height: 76px;
+  }
+
   .page#projects > section > .container-projects {
     flex-basis: calc(50% - 20px);
   }
@@ -77,11 +82,7 @@
 
 @media (max-width: 1024px) {
   .page > nav {
-    padding: 2rem 5rem;
-  }
-
-  .page > section.container {
-    gap: 5rem;
+    padding: 2rem 2rem;
   }
 
   h2 {
@@ -95,7 +96,11 @@
   }
 
   .page > section.container {
-    padding: 5rem 2rem;
+    padding: 0rem 1rem;
+  }
+  
+  section.container .subtitle {
+    font-size: 1em;
   }
 
   .page#about {
@@ -134,6 +139,15 @@
     inset: 1rem 0 0 0;
   }
 
+  section.container {
+    margin-top: 8rem;
+  }
+
+  #home .content-presentation .title {
+    font-size: 2.5em;
+    line-height: 56px;
+  }
+
   .page > article > .container-about .line {
     width: 15rem;
   }
@@ -141,10 +155,6 @@
   .page > section.container > div.content-presentation > p.title {
     font-size: 2.5em;
     line-height: 3rem;
-  }
-
-  section.container .subtitle {
-    font-size: 1em;
   }
 
   #contact > section > .container-form-contact > form > .input-field label {

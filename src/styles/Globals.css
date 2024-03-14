@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 .max-width {
   margin: auto;
   max-width: 1450px;
@@ -9,6 +16,9 @@
   transition: background-color ease 0.2s;
   width: 100%;
   padding: 0 3rem;
+  font-synthesis: style;
+  overflow-wrap: break-word;
+  text-rendering: optimizeLegibility;
 }
 
 .flex {
@@ -53,12 +63,18 @@ h2 {
 }
 /* Fim das Classes*/
 
+.title, h2 {
+  font-family: var(--font-Ubuntu);
+  color: var(--text-color_100);
+}
+
 p,
 strong,
 h3,
 h4,
 h5 {
   color: var(--text-color_200);
+  font-family: var(--font-Ubuntu);
 }
 
 .gradient-text {
@@ -72,9 +88,10 @@ h5 {
 .btn {
   cursor: pointer;
   font-family: var(--font-Ubuntu);
+  font-size: 1.1em;
   font-weight: 500;
   border-radius: 12px;
-  padding: 0.9rem 1rem;
+  padding: 1rem 2rem;
 
   text-align: center;
 
@@ -103,3 +120,31 @@ h5 {
   transition: filter 0.15s ease 0s;
 }
 /* Fim de estilos de botão */
+
+/* Início Estilo de Toast */
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  height: 50px;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  background-color: var(--bg-color_100);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  border-radius: 8px;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 2rem 2rem 2rem 1rem;
+  animation: popUp 4s ease-in-out;
+}
+
+.toast > div > p:first-child {
+  font-family: var(--font-Ubuntu);
+}
+
+.toast > div > p:last-child {
+  font-family: var(--font-IBM-Plex-Mono);
+}
+
+/* Fim de estilos de Toast*/

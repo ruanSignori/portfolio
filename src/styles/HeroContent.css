@@ -1,39 +1,29 @@
-#home {
-  background-image: url("../assets/images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 section.container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  gap: 5rem;
   margin-top: 10rem;
 }
 
 section.container .content-presentation {
   max-width: 800px;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
-
 section.container .title {
-  font-family: var(--font-Ubuntu);
-  font-weight: 700;
-  font-size: 3.7em;
-  line-height: 5rem;
-  color: var(--text-color_100);
+  font-weight: 900;
+  font-size: 4.5em;
+  line-height: 96px;
+  letter-spacing: -3px;
 }
 
 section.container .subtitle {
   max-width: 600px;
   color: #374151;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.1em;
   letter-spacing: 1px;
   line-height: 42px;
 }
