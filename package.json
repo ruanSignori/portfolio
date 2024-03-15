@@ -12,6 +12,7 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
-    "@phosphor-icons/web": "^2.0.3"
+    "@phosphor-icons/web": "^2.0.3",
+    "devicon": "^2.16.0"
   }
 }
