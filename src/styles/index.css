@@ -15,6 +15,8 @@
 
 
 :root {
+  --main-color: #00DDB3;
+  
   --font-IBM-Plex-Mono: "IBM Plex Mono", monospace, Arial, sans-serif;
   --font-Ubuntu: "Ubuntu", Arial, sans-serif;
 
