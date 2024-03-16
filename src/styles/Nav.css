@@ -1,5 +1,5 @@
 nav {
-  background-color: #f9fafb;
+  background-color: var(--bg-primary);
   width: 100%;
   padding: 0.8rem 5rem;
 
@@ -18,7 +18,7 @@ nav div.flex {
 }
 
 nav .item-navbar {
-  color: var(--text-color_100);
+  color: var(--text-secondary);
   font-size: 1em;
 }
 
@@ -37,7 +37,7 @@ nav .context-switch::after {
   content: "";
   width: 1px;
   height: 24px;
-  background-color: #d9dadc;
+  background-color: var(--bg-primary);
 }
 
 nav .context-switch input {
@@ -49,7 +49,7 @@ nav .context-switch label.change-color {
   height: 24px;
   border-radius: 3rem;
   cursor: pointer;
-  background-color: #d9dadc;
+  background-color: var(--bg-secondary);
   padding: 0.3rem;
   position: relative;
   justify-content: space-between;
@@ -60,7 +60,7 @@ nav .context-switch label.change-color {
 nav .context-switch label.change-color .ball {
   width: 18px;
   height: 18px;
-  background-color: #f9fafb;
+  background-color: var(--bg-primary);
   border-radius: 50%;
   position: absolute;
   top: 3px;
@@ -93,7 +93,7 @@ nav .context-switch input:checked + label.change-color > .ball {
 }
 
 .social-icon:hover svg path {
-  fill: #00ddb3;
+  fill: var(--main-color);
 }
 
 button.menu {
@@ -102,16 +102,16 @@ button.menu {
   cursor: pointer;
   border-radius: 0.3rem;
   background-color: transparent;
-  color: #374151;
+  color: var(--text-secondary);
   transition: background-color, ease 0.3s;
 }
 
 button.menu:hover {
-  background-color: #eaeaea;
+  background-color: var(--bg-secondary);
 }
 
 button.menu:focus {
-  outline: 2px solid turquoise;
+  outline: 2px solid var(--bg-primary);
 }
 
 button.menu i {

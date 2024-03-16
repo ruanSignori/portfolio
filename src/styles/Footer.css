@@ -1,6 +1,7 @@
 footer {
   min-height: 10vh;
-  background-color: var(--bg-color_0);
+  border-top: 1px solid var(--bg-secondary);
+  background-color: var(--bg-primary);
   padding: 2rem 2rem;
 
   justify-content: space-around;

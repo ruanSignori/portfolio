@@ -30,7 +30,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 3rem;
-    background-color: #F9FAFB;
+    background-color: var(--bg-primary);
     padding: 2rem;
     text-align: center;
     top: 58.5px; /*Nav Height*/
