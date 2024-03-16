@@ -42,7 +42,7 @@ h2 {
 }
 
 .inactive {
-  display: none;
+  display: none !important;
 }
 
 .icon-no-color {
@@ -148,3 +148,18 @@ h5 {
 }
 
 /* Fim de estilos de Toast*/
+
+/* Botão subir para o topo */
+.scroll-to-top {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  position: fixed;
+  font-size: 1.1em;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.scroll-to-top:visited, .scroll-to-top:active, .scroll-to-top:hover {
+  color: var(--text-primary);
+}
+/* Fim do botão subir para o topo */
