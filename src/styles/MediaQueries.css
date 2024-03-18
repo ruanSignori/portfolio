@@ -16,7 +16,7 @@
 
 @media (max-width: 1200px) {
   nav {
-    padding: 0.8rem 3rem;
+    padding: 0.8rem;
   }
 
   nav div.content-navbar {
@@ -94,12 +94,9 @@
   .page {
     padding: 0 0.8rem;
   }
+
   .page > nav > div > .context-switch {
     width: 15rem;
-  }
-
-  .page > section.container {
-    padding: 0rem 1rem;
   }
   
   section.container .subtitle {
