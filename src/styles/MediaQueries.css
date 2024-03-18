@@ -16,7 +16,7 @@
 
 @media (max-width: 1200px) {
   nav {
-    padding: 0.8rem;
+    padding: 0.8rem 1rem;
   }
 
   nav div.content-navbar {
@@ -96,15 +96,11 @@
 
 @media (max-width: 800px) {
   .page {
-    padding: 0 0.8rem;
+    padding: 0 1rem !important;
   }
 
   .page > nav > div > .context-switch {
     width: 15rem;
-  }
-  
-  section.container .subtitle {
-    font-size: 1em;
   }
 
   .page#about {
@@ -163,7 +159,26 @@
     margin-top: 8rem;
   }
 
+  section.container .content-presentation {
+    align-items: flex-start;
+  }
+
+  section.container .subtitle {
+    font-size: 1em;
+    text-align: left;
+  }
+
+  section.container .group-buttons {
+    width: 100%;
+  }
+
+  section.container .group-buttons a, section.container .group-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   #home .content-presentation .title {
+    text-align: left;
     font-size: 2.5em;
     line-height: 56px;
   }
