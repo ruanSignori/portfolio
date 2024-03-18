@@ -54,7 +54,7 @@ export class CreateProjectCard {
               this.thumb
             }" width="400" class="thumb-project" alt="Thumbnail do projeto ${
       this.title
-    }"/>
+    }" loading="lazy" />
             <div class="content-card flex">
                 <div class="content-card-row-1 flex">
                     <p class="category-project" title="Categoria do projeto">${
@@ -63,7 +63,7 @@ export class CreateProjectCard {
                     <div class="procjets-url">
                         <a href="${
                           this.linkRepo
-                        }" title="Código fonte do projeto">
+                        }" title="Código fonte do projeto" target="_blank">
                             <i class="ph-bold ph-code-simple"></i>
                         </a>
                         <a href="${this.siteProject}" title="Site do projeto">
@@ -79,13 +79,13 @@ export class CreateProjectCard {
             </div>
                 <div class="content-card-row-3 flex" title="Tecnologias utilizadas">
                     ${this.toolsUsed.map((element) => {
-                      element;
-                    })}
+                      return element;
+                    }).join('')}
                 </div>
             </div>
         </div>
     `;
 
-    document.querySelector(".container-cards").innerHTML = html;
+    document.querySelector(".container-cards").insertAdjacentHTML('beforeend', html)
   }
 }

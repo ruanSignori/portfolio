@@ -130,6 +130,10 @@
     max-width: 26rem;
   }
 
+  #projects .container-cards {
+    grid-template-columns: 1fr;
+  }
+
   footer {
     flex-direction: column;
     gap: 1.8rem;
