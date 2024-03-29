@@ -56,6 +56,10 @@
     line-height: 76px;
   }
 
+  #projects {
+    padding: 3rem 0.8rem;
+  }
+
   .page#projects > section > .container-projects {
     flex-basis: calc(50% - 20px);
   }
@@ -127,8 +131,20 @@
     max-width: 26rem;
   }
 
-  #projects .container-cards {
-    grid-template-columns: 1fr;
+  #projects .parent-container-cards {
+    overflow: hidden;
+    max-width: calc(100vw - 2rem);
+  }
+
+  #projects .parent-container-cards .container-cards {
+    overflow-x: scroll;
+    padding-block: 1.5rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  #projects .parent-container-cards .container-cards .card-project {
+    min-width: 380px;
   }
 
   footer {
@@ -159,6 +175,11 @@
   .page > section.container > div.content-presentation > p.title {
     font-size: 2.5em;
     line-height: 3rem;
+  }
+
+  #projects .parent-container-cards .container-cards .card-project {
+    padding: 0 0.8rem;
+    min-width: 350px;
   }
 
   #contact > section > .container-form-contact > form > .input-field label {
