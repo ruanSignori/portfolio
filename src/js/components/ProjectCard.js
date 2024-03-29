@@ -66,9 +66,13 @@ export class CreateProjectCard {
                         }" title="Código fonte do projeto" target="_blank">
                             <i class="ph-bold ph-code-simple"></i>
                         </a>
-                        <a href="${this.siteProject}" title="Site do projeto">
-                            <i class="ph-bold ph-link"></i>
-                        </a>
+                        ${(this.siteProject !== null) ?
+                        `
+                          <a href="${this.siteProject}" title="Site do projeto">
+                          <i class="ph-bold ph-link"></i>
+                          </a>
+                          ` : ''
+                        }
                     </div>
                 </div>
             <div class="content-card-row-2 flex">
