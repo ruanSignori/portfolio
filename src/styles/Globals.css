@@ -45,10 +45,6 @@ h2 {
   display: none !important;
 }
 
-.icon-no-color {
-  color: #D9DADC;
-}
-
 /* Classe utilizada para os cards e animações do IntersectionObserver */
 .hidden-element {
   opacity: 0;

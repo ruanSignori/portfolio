@@ -4,16 +4,6 @@
   }
 }
 
-@media (max-width: 1715px) {
-  #contact > section > div:first-child {
-    margin-left: 2rem;
-  }
-
-  #contact > section > div:last-child {
-    margin-right: 2rem;
-  }
-}
-
 @media (max-width: 1200px) {
   nav {
     padding: 0.8rem 1rem;
@@ -105,14 +95,6 @@
 
   .page#about {
     gap: 5rem;
-  }
-
-  .page#skills {
-    padding: 3rem 1rem;
-  }
-
-  .page > .content-skills > div > .parent-slider {
-    transform: scale(0.85);
   }
 
   .page > article > .container-about > .children-container {

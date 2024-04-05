@@ -1,135 +1,64 @@
-.page#skills {
+#skills {
+  min-height: 20rem;
   padding: 5rem 3rem;
-}
-
-.content-skills {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   gap: 5rem;
-}
-
-.content-skills > div.flex {
-  display: grid;
-  place-items: center;
   overflow: hidden;
 }
 
-.content-skills > div > .parent-slider {
-  height: 42rem;
+/* Logo */
+#skills .infinite-scroll {
   position: relative;
-  user-select: none;
+  white-space: nowrap;
 }
 
-.content-skills > div > .parent-slider .card {
-  width: 18rem;
-  height: 30rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border: 1px solid var(--bg-color_200);
-  border-radius: 0.8rem;
-  background-image: linear-gradient(
-    320deg,
-    var(--bg-color_100),
-    var(--bg-color_200)
-  );
-  -webkit-backdrop-filter: saturate(50%) blur(8px);
-  backdrop-filter: saturate(50%) blur(8px);
-  padding: 2rem 1.5rem;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -48%);
-  transition: all 300ms ease-in-out;
-  z-index: -1;
-  opacity: 0;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.content-skills > div > .parent-slider > .card > .title-card {
-  color: var(--text-color_100);
-  font-family: var(--font-Ubuntu);
-  font-size: 1.1em;
-}
-
-.content-skills > div > .parent-slider > .card > .content-card {
-  color: var(--text-color_200);
-  line-height: 24px;
-}
-
-.content-skills > div > .parent-slider .card.active {
-  opacity: 1;
-  z-index: 95;
-  box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
-}
-
-.content-skills > div > .parent-slider .card.prev {
-  z-index: 2;
-  opacity: 0.25;
-  transform: translate(-125%, -50%);
-}
-
-.content-skills > div > .parent-slider .card.next {
-  z-index: 2;
-  opacity: 0.25;
-  transform: translate(25%, -50%);
-}
-
-.content-skills > div > .parent-slider .btn-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 340px;
-  z-index: 95;
-}
-
-.content-skills > div > .parent-slider .btn-container > .btn {
-  cursor: pointer;
-  position: relative;
-  opacity: 0.75;
-  transition: all 300ms ease-in-out;
-}
-
-.page > .content-skills > div > .parent-slider > .btn-container > .btn:hover {
-  opacity: 1;
-}
-
-.page > .content-skills > div > .parent-slider > .btn-container > .btn::before {
+#skills .infinite-scroll::before,
+#skills .infinite-scroll::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 1);
-  -webkit-backdrop-filter: saturate(50%) blur(8px);
-  backdrop-filter: saturate(50%) blur(8px);
-  z-index: -96;
+  top: 0;
+  width: 500px;
+  height: 100%;
+ 
+  z-index: 2;
 }
 
-.page
-  > .content-skills
-  > div
-  > .parent-slider
-  > .btn-container
-  > .btn:nth-child(1) {
-  float: left;
+#skills .infinite-scroll:hover ul {
+  animation-play-state: paused;
 }
 
-.page
-  > .content-skills
-  > div
-  > .parent-slider
-  > .btn-container
-  > .btn:nth-child(2) {
-  float: right;
+.infinite-scroll::after {
+  left: 0;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-primary) 40%);
+}
+
+.infinite-scroll::before {
+  right: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-primary) 40%);
+}
+
+/* Logo slide*/
+#skills .infinite-scroll ul {
+  display: inline-block;
+  animation: 12s infinite-scroll infinite linear;
+}
+
+#skills .infinite-scroll ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 5rem;
+}
+
+#skills ul li i {
+  font-size: 6em;
+  color: var(--gray-primary);
+}
+
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);  
+  }
 }
