@@ -10,6 +10,7 @@
 #skills .infinite-scroll {
   position: relative;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 #skills .infinite-scroll::before,
@@ -17,7 +18,7 @@
   content: "";
   position: absolute;
   top: 0;
-  width: 500px;
+  width: 200px;
   height: 100%;
  
   z-index: 2;
@@ -29,28 +30,28 @@
 
 .infinite-scroll::after {
   left: 0;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-primary) 40%);
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 20% , var(--bg-primary) );
 }
 
 .infinite-scroll::before {
   right: 0;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-primary) 40%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, var(--bg-primary));
 }
 
 /* Logo slide*/
 #skills .infinite-scroll ul {
   display: inline-block;
-  animation: 12s infinite-scroll infinite linear;
+  animation: 15s infinite-scroll infinite linear;
 }
 
 #skills .infinite-scroll ul li {
   list-style: none;
   display: inline-block;
-  margin: 0 5rem;
+  margin: 0 4rem;
 }
 
 #skills ul li i {
-  font-size: 6em;
+  font-size: 5em;
   color: var(--gray-primary);
 }
 
