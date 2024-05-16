@@ -81,6 +81,10 @@ nav .context-switch label.change-color .ball {
   align-items: center;
 }
 
+.icon-sun, .icon-moon {
+  color: var(--gray-primary);
+}
+
 nav label.change-color .ball .icon-sun,
 nav .context-switch input:checked + label.change-color > .ball .icon-moon {
   display: none;
