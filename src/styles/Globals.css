@@ -151,6 +151,7 @@ h5 {
   background-color: var(--bg-secondary);
   position: fixed;
   font-size: 1.1em;
+  z-index: 3;
   right: 2rem;
   bottom: 2rem;
 }
