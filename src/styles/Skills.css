@@ -24,6 +24,20 @@
   z-index: 2;
 }
 
+/*Utilizado quando não é para ter animação de Scroll Infinito*/
+#skills .infinite-scroll .skills-grid {
+  max-width: 1024px;
+  animation: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+#skills .infinite-scroll .skills-grid li {
+  display: block;
+  margin: 0;
+}
+
 #skills .infinite-scroll:hover ul {
   animation-play-state: paused;
 }

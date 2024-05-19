@@ -43,6 +43,15 @@
 //   container[next].classList.add("next");
 // };
 
+const slider = document.querySelector('.infinite-scroll ul');
 
-const copy = document.querySelector('.infinite-scroll ul').cloneNode(true);
-document.querySelector('.infinite-scroll').appendChild(copy)
+const destroyerInfiniteScroll = () => {
+    slider.classList.add('skills-grid');
+}
+
+if (window.matchMedia(("(prefers-reduced-motion: reduce)")).matches) {
+    destroyerInfiniteScroll();
+} else {
+    const copy = slider.cloneNode(true);
+    document.querySelector('.infinite-scroll').appendChild(copy);
+}
