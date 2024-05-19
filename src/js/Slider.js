@@ -42,9 +42,7 @@
 //   container[prev].classList.add("prev");
 //   container[next].classList.add("next");
 // };
-
 const slider = document.querySelector('.infinite-scroll ul');
-
 const destroyerInfiniteScroll = () => {
     slider.classList.add('skills-grid');
 }
