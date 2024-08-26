@@ -41,11 +41,6 @@
     display: block;
   }
 
-  #home .content-presentation .title {
-    font-size: 3.5em;
-    line-height: 76px;
-  }
-
   #projects {
     padding: 3rem 0.8rem;
   }
@@ -71,6 +66,13 @@
 
   #contact > section .container-social-cards > h2 {
     margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  #home .content-presentation .title {
+    font-size: 3.5em;
+    line-height: 72px;
   }
 }
 

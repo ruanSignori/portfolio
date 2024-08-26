@@ -15,8 +15,6 @@ section.container .content-presentation {
 section.container .title {
   color: var(--text-primary);
   font-weight: 900;
-  font-size: 4.5em;
-  line-height: 96px;
   letter-spacing: -3px;
 }
 
