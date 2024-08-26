@@ -23,6 +23,8 @@
   --shadow-black: 0px 4px 18px 1px rgba(0, 0, 0, 0.041);
   --gradient-main-color: linear-gradient(90deg, #00DDB3 34.27%, #01F27E 69.36%);
 
+  --bd-radius-default: 8px;
+
   color-scheme: light dark;
 
   font-synthesis: none;
