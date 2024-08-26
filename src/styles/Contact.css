@@ -38,13 +38,14 @@
 #contact section .container-form-contact form textarea {
   background-color: transparent;
   border-radius: var(--bd-radius-default);
-  border: 3px solid var(--bg-secondary);
+  border: 1px solid var(--bg-secondary);
   box-shadow: var(--shadow-black);
+  transition: outline ease-in 100ms;
 }
 
 #contact .container-form-contact form .input-field input:focus,
 #contact .container-form-contact form textarea:focus {
-  outline: none;
+  outline: 2px solid var(--bg-secondary);
 }
 
 #contact .container-form-contact form textarea {
