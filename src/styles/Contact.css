@@ -1,3 +1,15 @@
+#contact section {
+  width: 100%;
+}
+
+#contact .content-contact {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-wrap: 1 1 800px;
+}
+
 #contact .contact-me {
   justify-content: flex-start;
   flex-direction: column;
