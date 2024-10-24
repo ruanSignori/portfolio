@@ -2,10 +2,15 @@
   width: 100%;
 }
 
+#contact section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 #contact .content-contact {
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   flex-wrap: 1 1 800px;
 }
@@ -56,11 +61,13 @@
 
 #contact .container-form-contact form .input-field input:focus,
 #contact .container-form-contact form textarea:focus {
-  outline: 1px solid var(--text-secondary);
+  outline: none;
+  border: 1px solid var(--main-color);
 }
 
 #contact .container-form-contact form textarea {
-  width: 35rem;
+  width: calc(100vw - 2rem);
+  max-width: 35rem;
   min-height: 4rem;
   max-height: 20rem;
   padding: 1rem;

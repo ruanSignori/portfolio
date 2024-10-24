@@ -152,6 +152,10 @@
     align-items: flex-start;
   }
 
+  #home .content-presentation .title {
+    text-align: left;
+  }
+
   section.container .subtitle {
     font-size: 1em;
     text-align: left;
@@ -203,5 +207,9 @@
 
   #contact > section > .container-form-contact > form > textarea {
     width: 18rem;
+  }
+
+  h2 {
+    text-align: left !important;
   }
 }
