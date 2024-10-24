@@ -84,6 +84,11 @@
   h2 {
     font-size: 2em;
   }
+
+  #home .content-presentation .title {
+    font-size: 2.5em;
+    line-height: 56px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -161,19 +166,8 @@
     justify-content: center;
   }
 
-  #home .content-presentation .title {
-    text-align: left;
-    font-size: 2.5em;
-    line-height: 56px;
-  }
-
   .page > article > .container-about .line {
     width: 15rem;
-  }
-
-  .page > section.container > div.content-presentation > p.title {
-    font-size: 2.5em;
-    line-height: 3rem;
   }
 
   #projects .parent-container-cards .container-cards .card-project {
