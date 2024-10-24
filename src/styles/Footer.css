@@ -3,11 +3,12 @@ footer {
   border-top: 1px solid var(--bg-secondary);
   background-color: var(--bg-primary);
   padding: 2rem 2rem;
-
-  justify-content: space-around;
-  flex-direction: row;
 }
 
-footer > p {
-  font-family: var(--font-IBM-Plex-Mono);
+footer .content-footer {
+  justify-content: space-around;
+}
+
+footer .content-footer .logo-footer {
+  gap: 12px;
 }
