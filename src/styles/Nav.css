@@ -9,8 +9,8 @@ nav {
   z-index: 99;
 
   font-weight: 500;
-
   box-shadow: var(--shadow-black);
+  border-bottom: 1px solid var(--bg-secondary);
 }
 
 nav div.flex {
