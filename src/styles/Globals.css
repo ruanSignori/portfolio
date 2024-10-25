@@ -134,7 +134,7 @@ h5 {
   gap: 1rem;
   padding: 2rem 2rem 2rem 1rem;
   animation: popUp 4s ease-in-out;
-  z-index: 5;
+  z-index: 35;
 }
 
 .toast > div > p {

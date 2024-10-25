@@ -6,7 +6,7 @@ nav {
 
   position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 30;
 
   font-weight: 500;
   box-shadow: var(--shadow-black);
