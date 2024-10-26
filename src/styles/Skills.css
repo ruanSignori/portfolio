@@ -38,6 +38,10 @@
   margin: 0;
 }
 
+#skills .infinite-scroll:hover ul {
+  animation-play-state: paused !important;
+}
+
 .infinite-scroll::after {
   left: 0;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 20% , var(--bg-primary) );
