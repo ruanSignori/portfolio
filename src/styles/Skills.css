@@ -38,10 +38,6 @@
   margin: 0;
 }
 
-#skills .infinite-scroll:hover ul {
-  animation-play-state: paused;
-}
-
 .infinite-scroll::after {
   left: 0;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 20% , var(--bg-primary) );
@@ -55,25 +51,16 @@
 /* Logo slide*/
 #skills .infinite-scroll ul {
   display: inline-block;
-  animation: 15s infinite-scroll infinite linear;
+  animation: 12s infinite-scroll infinite linear;
 }
 
 #skills .infinite-scroll ul li {
   list-style: none;
   display: inline-block;
-  margin: 0 4rem;
+  margin: 0 3.5rem;
 }
 
 #skills ul li i {
-  font-size: 5em;
+  font-size: 4.5em;
   color: var(--gray-primary);
-}
-
-@keyframes infinite-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);  
-  }
 }
