@@ -1,24 +1,21 @@
-section.container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+#home .section-hero.container {
   text-align: center;
-  align-items: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
-section.container .content-presentation {
+#home section.container .content-presentation {
   max-width: 800px;
   flex-direction: column;
   gap: 2rem;
 }
-section.container .title {
+
+#home section.container .title {
   color: var(--text-primary);
   font-weight: 900;
   letter-spacing: -3px;
 }
 
-section.container .subtitle {
+#home section.container .subtitle {
   max-width: 600px;
   color: var(--text-secondary);
   font-weight: 500;
@@ -27,6 +24,6 @@ section.container .subtitle {
   line-height: 42px;
 }
 
-section.container .group-buttons {
+#home section.container .group-buttons {
   gap: 1rem;
 }
