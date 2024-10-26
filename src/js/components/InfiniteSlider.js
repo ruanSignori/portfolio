@@ -65,6 +65,12 @@ export class InfiniteSlider {
         });
     }
 
+    /**
+     * Verifica se o elemento passado por parâmetro está em tela.
+     * 
+     * Se não estiver, ele pausa a animação, para poupar recursos do navegador do usuário
+     * @param {string} pathElement 
+     */
     #stopAnimationIfElementNotInScreen(pathElement) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
