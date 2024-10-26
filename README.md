@@ -19,22 +19,24 @@ dos conhecimentos que eu possuo, e também divulgar alguns projetos que já fiz.
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) <br>
 ![Css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-
 ## 🖥️ Instalação
+
 Se por acaso gostaria de instalar o projeto e rodar localmente, segue os passos abaixo:
 
-* Clone do repositório
+- Clone do repositório
+
   ```bash
   git clone https://github.com/ruanSignori/portfolio.git
   ```
 
-* Acesse o diretório `/portfolio` e execute o comando para instalar as dependencias
+- Acesse o diretório `/portfolio` e execute o comando para instalar as dependencias
+
   ```bash
   cd portfolio && npm i
   ```
 
-* Inicialização do servidor
+- Inicialização do servidor
   ```bash
   npm run dev
   ```
-Após seguir esses passos, já vai ser possível acessar o site localmente.
+  Após seguir esses passos, já vai ser possível acessar o site localmente.
