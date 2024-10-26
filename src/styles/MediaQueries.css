@@ -93,7 +93,7 @@
 
 @media (max-width: 800px) {
   .page {
-    padding: 0 1rem 8rem 1rem !important;
+    padding: 0 2rem 8rem 2rem !important;
   }
 
   .page > nav > div > .context-switch {
