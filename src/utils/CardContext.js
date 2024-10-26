@@ -68,7 +68,7 @@ export const cardProjectData = [
   },
   {
     thumb: thumb_leitor_csv,
-    title: 'Leito de CSV',
+    title: 'Leitor de CSV',
     description: 'Servidor que lê arquivo em CSV no formato de “Streams” e renderiza no navegador.',
     category: 'Back End',
     siteProject: null,
