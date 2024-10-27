@@ -48,7 +48,7 @@ export class InfiniteSlider {
      */
     #disableInfiniteScrollForReducedMotion() {
         if (window.matchMedia(("(prefers-reduced-motion: reduce)")).matches) {
-            sliderElement.classList.add('skills-grid');
+            //this.sliderElement.classList.add('skills-grid');
         }
     }
 
