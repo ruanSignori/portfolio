@@ -2,7 +2,6 @@ import thumb_clone_netflix from '../assets/images/thumb/clone-netflix.webp';
 import thumb_crud_pedidos from '../assets/images/thumb/crud-pedidos.webp';
 import thumb_regtech from '../assets/images/thumb/regtech.webp';
 import thumb_crud_usuarios from '../assets/images/thumb/crud-usuarios.webp';
-import thumb_escola_padre_fernando from '../assets/images/thumb/escola-padre-fernando.webp';
 import thumb_leitor_csv from '../assets/images/thumb/leitor-csv.webp';
 
 
@@ -56,15 +55,6 @@ export const cardProjectData = [
     siteProject: null,
     linkRepo: 'https://github.com/ruanSignori/crud-nodeJS',
     toolsUsed: [tools.TypeScript, tools.NodeJs, tools.MongoDb]
-  },
-  {
-    thumb: thumb_escola_padre_fernando,
-    title: 'Landing Page',
-    description: 'Site sobre os projetos realizados na minha antiga escola, utilizando Static Site Generation',
-    category: 'Full Stack',
-    siteProject: 'https://escola-padre-fernando.vercel.app/',
-    linkRepo: 'https://github.com/ruanSignori/escola-padre-fernando',
-    toolsUsed: [tools.NextJs, tools.TypeScript, tools.TailwindCss, tools.MongoDb]
   },
   {
     thumb: thumb_leitor_csv,
