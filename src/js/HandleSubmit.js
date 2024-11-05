@@ -35,14 +35,13 @@ const handleSubmit = (event) => {
         return toast.ok("E-mail enviado!");
       }
 
-      // Se acontecer algum erro que não está previsto, vai cair no tratamento de erro.
+      // Tratamento de erro.
       response.json().then((data) => {
         if (Object.hasOwn(data, "errors")) {
-          const messageError = data["errors"].map((error) => error["message"]);
-
+          const messageError = getErrorMessage(data['errors']);
           return toast.error(messageError);
         }
-        form.requestSubmit();
+
         toast.error("Não foi possível enviar o seu formulário");
       });
 
@@ -52,5 +51,20 @@ const handleSubmit = (event) => {
       toast.error("Não foi possível enviar o seu formulário");
     });
 };
+
+const getErrorMessage = (data) => {
+  const messageTranslated = {
+    TYPE_EMAIL: 'Tipo de e-mail inválido',
+    INVALID_REQUEST: "A solicitação é inválida.",
+    REQUIRED: "Este campo é obrigatório.",
+    EMPTY: "Informe uma mensagem para ser enviada"
+  }
+
+  const message = data.map((error) => { 
+    return messageTranslated[error["code"]];
+  })
+
+  return message;
+}
 
 form.addEventListener("submit", (e) => handleSubmit(e));
