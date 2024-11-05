@@ -12,3 +12,8 @@ footer .content-footer {
 footer .content-footer .logo-footer {
   gap: 12px;
 }
+
+footer a , footer a:visited {
+  text-decoration: underline;
+  color: var(--text-secondary);
+}
