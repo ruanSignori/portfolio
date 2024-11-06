@@ -1,0 +1,20 @@
+#experience h2 {
+  text-align: center;
+}
+
+.container-timeline {
+  flex-direction: column;
+  gap: 5rem;
+}
+
+ul.timeline {
+  overflow-x: auto;
+  padding: 20px;
+  gap: 10rem;
+}
+
+.timeline-item {
+  position: relative;
+  min-width: 200px;
+  text-align: center;
+}

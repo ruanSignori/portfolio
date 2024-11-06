@@ -7,7 +7,7 @@
 
 .max-width {
   margin: auto;
-  max-width: 1450px;
+  max-width: var(--max-w);
 }
 
 .page {
@@ -34,6 +34,7 @@ h2 {
   margin: auto;
   font-size: 2.8em;
   display: block;
+  text-align: center;
 }
 
 .active {
@@ -62,6 +63,13 @@ h2 {
   color: var(--text-primary);
 }
 
+.title-context {
+  max-width: 500px;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
 p,
 strong,
 h3,
@@ -69,6 +77,10 @@ h4,
 h5 {
   color: var(--text-secondary);
   font-family: var(--font-Ubuntu);
+}
+
+.lh-28 {
+  line-height: 28px;
 }
 
 .gradient-text {

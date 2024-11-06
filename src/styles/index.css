@@ -5,6 +5,7 @@
 @import url("Nav.css");
 @import url("HeroContent.css");
 @import url("About.css");
+@import url("TimeLineExperience.css");
 @import url("Skills.css");
 @import url("Projects.css");
 @import url("Contact.css");
@@ -24,9 +25,10 @@
   --gradient-main-color: linear-gradient(90deg, #00DDB3 34.27%, #01F27E 69.36%);
 
   --bd-radius-default: 8px;
+  --max-w: 1450px;
 
   color-scheme: light dark;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
