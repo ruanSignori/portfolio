@@ -4,11 +4,17 @@
   justify-content: space-between;
   gap: 15rem;
   padding: 5rem 0;
+  background-color: var(--text-primary);
 }
 
 .page#about > article .text-about {
   font-size: 1.1em;
   line-height: 2rem;
+  color: var(--bg-primary);
+}
+
+.page#about > article h2 {
+  color: var(--bg-primary);
 }
 
 article {

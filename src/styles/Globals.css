@@ -15,7 +15,7 @@
   background-color: var(--bg-primary);
   transition: background-color ease 0.2s;
   width: 100%;
-  padding: 4rem 0rem;
+  padding: 8rem 0rem;
   font-synthesis: style;
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
