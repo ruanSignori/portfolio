@@ -6,7 +6,7 @@ footer {
 }
 
 footer .content-footer {
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 footer .content-footer .logo-footer {

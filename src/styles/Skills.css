@@ -8,7 +8,6 @@
 
 /* Logo */
 #skills .infinite-scroll {
-  width: calc(var(--max-w) * 0.8);
   position: relative;
   white-space: nowrap;
   overflow: hidden;

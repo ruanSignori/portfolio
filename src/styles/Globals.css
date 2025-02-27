@@ -8,6 +8,7 @@
 .max-width {
   margin: auto;
   max-width: var(--max-w);
+  width: 100%;
 }
 
 .page {
