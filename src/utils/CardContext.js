@@ -1,8 +1,8 @@
-import thumb_clone_netflix from '../assets/images/thumb/clone-netflix.webp';
-import thumb_crud_pedidos from '../assets/images/thumb/crud-pedidos.webp';
-import thumb_regtech from '../assets/images/thumb/regtech.webp';
-import thumb_crud_usuarios from '../assets/images/thumb/crud-usuarios.webp';
-import thumb_leitor_csv from '../assets/images/thumb/leitor-csv.webp';
+import thumb_clone_netflix from "../images/thumb/clone-netflix.webp";
+import thumb_crud_pedidos from "/images/thumb/crud-pedidos.webp";
+import thumb_regtech from "/images/thumb/regtech.webp";
+import thumb_crud_usuarios from "/images/thumb/crud-usuarios.webp";
+import thumb_leitor_csv from "/images/thumb/leitor-csv.webp";
 
 
 const tools = {

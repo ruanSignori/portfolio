@@ -1,4 +1,4 @@
 Sitemap: https://ruansignori.tech
 User-agent: *
 Disallow: robots.txt
-Disallow: /assets/
+

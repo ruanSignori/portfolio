@@ -1,5 +1,5 @@
-import SuccessIcon from "../assets/images/toast/success.svg";
-import ErrorIcon from "../assets/images/toast/error.svg";
+import SuccessIcon from "public/images/toast/success.svg";
+import ErrorIcon from "/images/toast/error.svg";
 
 export class CreateToast {
   _createToast(srcIcon, title, message) {
