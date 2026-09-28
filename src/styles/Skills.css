@@ -1,70 +1,79 @@
 #skills {
-  min-height: 20rem;
-  padding: 5rem 3rem;
-  flex-direction: column;
-  gap: 5rem;
   overflow: hidden;
 }
 
-/* Logo */
+/* Slider infinito */
 #skills .infinite-scroll {
   position: relative;
-  white-space: nowrap;
   overflow: hidden;
+  padding-block: var(--space-2);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
 }
 
-#skills .infinite-scroll::before,
-#skills .infinite-scroll::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 200px;
-  height: 100%;
- 
-  z-index: 2;
-}
-
-/*Utilizado quando não é para ter animação de Scroll Infinito*/
-#skills .infinite-scroll .skills-grid {
-  max-width: 1024px;
-  animation: none;
+/*
+ * A lista contém os itens originais + os clones (InfiniteSlider.js),
+ * então deslocar -50% faz o loop ficar perfeito, independente da quantidade de itens.
+ * O espaçamento é feito com padding (e não gap) para manter as duas metades idênticas.
+ */
+#skills .infinite-scroll ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-}
-
-#skills .infinite-scroll .skills-grid li {
-  display: block;
-  margin: 0;
+  width: max-content;
+  animation: infinite-scroll 35s linear infinite;
 }
 
 #skills .infinite-scroll:hover ul {
   animation-play-state: paused !important;
 }
 
-.infinite-scroll::after {
-  left: 0;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 20% , var(--bg-primary) );
-}
-
-.infinite-scroll::before {
-  right: 0;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, var(--bg-primary));
-}
-
-/* Logo slide*/
-#skills .infinite-scroll ul {
-  display: inline-block;
-  animation: 12s infinite-scroll infinite linear;
-}
-
 #skills .infinite-scroll ul li {
   list-style: none;
-  display: inline-block;
-  margin: 0 3.5rem;
+  padding-inline: var(--space-3);
 }
 
 #skills ul li i {
-  font-size: 4.5em;
-  color: var(--gray-primary);
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  font-size: 3.25rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--bg-secondary);
+  border-radius: var(--bd-radius-lg);
+  transition: color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+#skills ul li i:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  transform: translateY(-4px);
+}
+
+/* Sem animação: mostra apenas os itens originais em grade */
+@media (prefers-reduced-motion: reduce) {
+  #skills .infinite-scroll {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  #skills .infinite-scroll ul {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: var(--space-6);
+  }
+
+  #skills .infinite-scroll ul li[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  #skills ul li i {
+    width: 88px;
+    height: 88px;
+    font-size: 2.5rem;
+  }
 }

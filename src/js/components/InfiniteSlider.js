@@ -2,9 +2,9 @@ import { sliderItems } from "../../utils/ItemsInfiniteSlider";
 
 /**
  * Classe responsável por criar o "Slider Infinito"
- * 
+ *
  * Basta apenas ter uma instância dela, que ela se encarrega de fazer o resto (por enquanto)
- * 
+ *
  */
 export class InfiniteSlider {
     constructor (
@@ -22,56 +22,42 @@ export class InfiniteSlider {
      * Monta o html que renderiza os elementos do "Slider Infinito"
      */
     #renderElements() {
-        const sliderItemsClass = sliderItems;
-
-        Object.values(sliderItemsClass).forEach(currentItem => {
+        Object.entries(sliderItems).forEach(([name, iconClass]) => {
             const listElement = document.createElement('li');
-            const iconElement = document.createElement('i');   
+            const iconElement = document.createElement('i');
 
-            iconElement.className = currentItem;
+            iconElement.className = iconClass;
+            listElement.title = name;
             listElement.appendChild(iconElement);
             this.sliderElement.appendChild(listElement);
         });
 
-        this.#disableInfiniteScrollForReducedMotion();
-
         // Clona todos os <li> e os renderiza, para dar o efeito de "Slider Infinito"
-        this.#cloneElements('.infinite-scroll ul li');
-        this.#stopAnimationIfElementNotInScreen('.infinite-scroll ul');
+        this.#cloneElements();
+        this.#stopAnimationIfElementNotInScreen();
     }
 
     /**
-     * Verifica se o usuário está com configuração de (prefers-reduced-motion: reduce).
-     * 
-     * Se sim, não aplica o Scroll Infinito por questões de desempenho.
-     * @reference https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+     * Clona os itens do slider e adiciona as cópias ao final da lista.
+     *
+     * As cópias recebem aria-hidden para não serem lidas duas vezes por leitores de tela
+     * (e para serem escondidas via CSS quando o usuário prefere menos movimento).
      */
-    #disableInfiniteScrollForReducedMotion() {
-        if (window.matchMedia(("(prefers-reduced-motion: reduce)")).matches) {
-            //this.sliderElement.classList.add('skills-grid');
-        }
-    }
-
-    /**
-     * Clona um elemento e retorna essa cópia
-     * @param {string} pathElement - O seletor do elemento que será clonado
-     * @returns {Element} - A cópia do elemento original
-     */
-    #cloneElements(pathElement) {
-        const originalElements = document.querySelectorAll(pathElement);
+    #cloneElements() {
+        const originalElements = [...this.sliderElement.children];
         originalElements.forEach(item => {
-            const clonedItem = item.cloneNode(true); // Clona o item <li> individualmente
-            this.sliderElement.appendChild(clonedItem); // Adiciona o clone ao final da lista
+            const clonedItem = item.cloneNode(true);
+            clonedItem.setAttribute('aria-hidden', 'true');
+            this.sliderElement.appendChild(clonedItem);
         });
     }
 
     /**
-     * Verifica se o elemento passado por parâmetro está em tela.
-     * 
+     * Verifica se o slider está em tela.
+     *
      * Se não estiver, ele pausa a animação, para poupar recursos do navegador do usuário
-     * @param {string} pathElement 
      */
-    #stopAnimationIfElementNotInScreen(pathElement) {
+    #stopAnimationIfElementNotInScreen() {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 const playState = entry.isIntersecting ? 'running' : 'paused';
@@ -81,8 +67,7 @@ export class InfiniteSlider {
             threshold: 0.1
         });
 
-        const sliderContainer = document.querySelector(pathElement);
-        observer.observe(sliderContainer);
+        observer.observe(this.sliderElement);
     }
 
 }

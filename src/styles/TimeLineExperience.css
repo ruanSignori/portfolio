@@ -1,20 +1,13 @@
-#experience h2 {
-  text-align: center;
-}
-
-.container-timeline {
-  flex-direction: column;
-  gap: 5rem;
-}
-
-ul.timeline {
+/* Seção de experiência (ainda sem conteúdo, desativada no index.html) */
+#experience .timeline {
+  list-style: none;
+  display: flex;
+  gap: var(--space-8);
   overflow-x: auto;
-  padding: 20px;
-  gap: 10rem;
+  padding-block: var(--space-4);
 }
 
-.timeline-item {
+#experience .timeline-item {
   position: relative;
   min-width: 200px;
-  text-align: center;
 }

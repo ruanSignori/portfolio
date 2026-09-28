@@ -48,48 +48,38 @@ export class CreateProjectCard {
   }
 
   #render() {
+    const siteLink = this.siteProject !== null
+      ? `
+        <a href="${this.siteProject}" title="Site do projeto" aria-label="Site do projeto ${this.title}" target="_blank" rel="noopener">
+          <i class="ph-bold ph-arrow-up-right"></i>
+        </a>
+      `
+      : '';
+
     const html = `
-        <div class="flex card-project">
-            <img src="${
-              this.thumb
-            }" width="400" class="thumb-project" alt="Thumbnail do projeto ${
-      this.title
-    }" loading="lazy" />
-            <div class="content-card flex">
-                <div class="content-card-row-1 flex">
-                    <p class="category-project" title="Categoria do projeto">${
-                      this.category
-                    }</p>
-                    <div class="procjets-url">
-                        <a href="${
-                          this.linkRepo
-                        }" title="Código fonte do projeto" target="_blank">
-                            <i class="ph-bold ph-code-simple"></i>
-                        </a>
-                        ${(this.siteProject !== null) ?
-                        `
-                          <a href="${this.siteProject}" title="Site do projeto">
-                          <i class="ph-bold ph-link"></i>
-                          </a>
-                          ` : ''
-                        }
-                    </div>
-                </div>
-            <div class="content-card-row-2 flex">
-                <p class="card-title">${this.title}</p>
-                <p class="card-description">
-                    ${this.description}
-                </p>
-            </div>
-                <div class="content-card-row-3 flex" title="Tecnologias utilizadas">
-                    ${this.toolsUsed.map((element) => {
-                      return element;
-                    }).join('')}
-                </div>
-            </div>
+      <article class="card-project">
+        <div class="card-thumb">
+          <img src="${this.thumb}" width="494" height="226" alt="Thumbnail do projeto ${this.title}" loading="lazy" />
         </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="category-project" title="Categoria do projeto">${this.category}</span>
+            <div class="project-links">
+              <a href="${this.linkRepo}" title="Código fonte do projeto" aria-label="Código fonte do projeto ${this.title}" target="_blank" rel="noopener">
+                <i class="ph-bold ph-github-logo"></i>
+              </a>
+              ${siteLink}
+            </div>
+          </div>
+          <h3 class="card-title">${this.title}</h3>
+          <p class="card-description">${this.description}</p>
+          <div class="card-tools" title="Tecnologias utilizadas">
+            ${this.toolsUsed.join('')}
+          </div>
+        </div>
+      </article>
     `;
 
-    document.querySelector(".container-cards").insertAdjacentHTML('beforeend', html)
+    document.querySelector(".container-cards").insertAdjacentHTML('beforeend', html);
   }
 }
