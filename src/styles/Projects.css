@@ -1,97 +1,118 @@
-
-#projects section {
-  justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 #projects .container-cards {
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: auto 1fr 1fr; 
-  gap: 100px 50px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: var(--space-8);
 }
 
 #projects .card-project {
-  max-width: 450px;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background-color: var(--bg-primary);
   border: 1px solid var(--bg-secondary);
-  box-shadow: var(--shadow-black);
-  border-radius: var(--bd-radius-default);
+  border-radius: var(--bd-radius-lg);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
 
+#projects .card-project:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--main-color) 50%, var(--bg-secondary));
+  box-shadow: var(--shadow-elevated);
+}
+
+#projects .card-thumb {
+  aspect-ratio: 494 / 226; /* Proporção das thumbs */
+  overflow: hidden;
+  border-bottom: 1px solid var(--bg-secondary);
+}
+
+#projects .card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#projects .card-project:hover .card-thumb img {
+  transform: scale(1.04);
+}
+
+#projects .card-body {
+  flex: 1;
+  display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--space-3);
+  padding: var(--space-6);
 }
 
-#projects .card-project .thumb-project {
-  width: 100%;
-  border-radius: var(--bd-radius-default);
-  border: 2px solid var(--bg-secondary);
+#projects .card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-1);
 }
 
-#projects .card-project .content-card {
-  flex-direction: column;
-  width: 100%;
-  gap: 1.5rem;
+#projects .category-project {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-text, var(--main-color));
+  background-color: var(--main-color-soft);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--bd-radius-full);
 }
 
-#projects .card-project .content-card .content-card-row-1 {
-  width: 100%;
-  justify-content: space-between !important;
+#projects .project-links {
+  display: flex;
+  gap: var(--space-2);
 }
 
-#projects .card-project .content-card .content-card-row-1 .category-project {
-  font-size: 0.7em;
-  display: block;
-  background-color: var(--bg-secondary);
+#projects .project-links a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  font-size: var(--fs-md);
   color: var(--text-secondary);
-  padding: 0.35rem;
+  border: 1px solid var(--bg-secondary);
   border-radius: var(--bd-radius-default);
+  transition: color var(--transition), border-color var(--transition);
 }
 
-#projects .card-project .content-card .content-card-row-1 .procjets-url a:visited {
-  color: var(--bg-primary);
-}
-
-#projects .card-project .content-card .content-card-row-1 .procjets-url a i {
-  font-size: 1.3em;
-  color: var(--text-secondary);
-  transition: color ease 0.5s;
-} 
-
-
-#projects .card-project .content-card .content-card-row-1 .procjets-url a i:hover {
+#projects .project-links a:hover,
+#projects .project-links a:focus-visible {
   color: var(--main-color);
+  border-color: var(--main-color);
+  outline: none;
 }
 
-#projects .card-project .content-card .content-card-row-1 .procjets-url a i:nth-child(1) {
-  margin-left: 12px;
+#projects .card-title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-primary);
 }
 
-#projects .card-project .content-card .content-card-row-2 {
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 0.6rem;
+#projects .card-description {
+  flex: 1;
+  line-height: 1.7;
 }
 
-#projects .card-project .content-card .content-card-row-2 .card-title {
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
-#projects .card-project .content-card .content-card-row-2 .card-description {
-  line-height: 26px;
-}
-
-#projects .card-project .content-card .content-card-row-3 {
-  width: 100%;
-  align-items: flex-start;
-  justify-content: flex-start;
+#projects .card-tools {
+  display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  margin-top: var(--space-2);
+  border-top: 1px solid var(--bg-secondary);
 }
 
-#projects .card-project .content-card .content-card-row-3 i {
-  font-size: 1.8em
+#projects .card-tools i {
+  font-size: 1.75rem;
+}
+
+#projects .projects-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--section-gap);
 }

@@ -144,31 +144,25 @@
 
     <!-- Hero -->
     <div id="home" class="page flex">
-      <section class="container max-width section-hero flex ">
-        <div class="content-presentation flex">
-          <p class="title">
+      <section class="container section-hero">
+        <div class="content-presentation">
+          <span class="badge-status"><span class="dot"></span>Desenvolvedor Full Stack</span>
+          <h1 class="title">
             Prazer, sou Ruan Signori. <br />
             Sou um Desenvolvedor <br />
-            &lt; <span class="gradient-text">Web Full Stack</span> />
-          </p>
+            <span class="gradient-text">&lt;Web Full Stack /&gt;</span>
+          </h1>
           <p class="subtitle">
-            Primeiramente, obrigado por acessar o meu portfólio. 
-            Desenvolvo aplicações Web Full Stack utilizando 
+            Primeiramente, obrigado por acessar o meu portfólio.
+            Desenvolvo aplicações Web Full Stack utilizando
             principalmente NextJs, TypeScript e PostgreSQL.
           </p>
-          <div class="flex group-buttons">
-            <!-- <a href="#skills">
-              <button class="flex btn btn-secondary" name="more">
-                Ver mais
-                <i class="ph-bold ph-caret-double-down"></i>
-              </button>
+          <div class="group-buttons">
+            <a href="#projects" class="btn btn-primary">
+              Ver projetos
+              <i class="ph-bold ph-arrow-down"></i>
             </a>
-            <a href="">
-              <button class="btn btn-primary">
-                Download CV
-                <i class="ph-bold ph-download-simple"></i>
-              </button>
-            </a> -->
+            <a href="#contact" class="btn btn-secondary">Entre em contato</a>
           </div>
         </div>
       </section>
@@ -176,95 +170,152 @@
     <!-- Fim do Hero-->
 
     <!-- Skills -->
-    <div id="skills" class="page flex">
-      <div class="title-context flex">
-        <h2>Stack principais</h2>
-        <p class="subtitle lh-28">Essas são as principais tecnologias e ferramentas que possuo conhecimento 
-           para desenvolver aplicações web.</p>
+    <div id="skills" class="page page-alt">
+      <div class="container">
+        <header class="section-header centered">
+          <span class="eyebrow">stack</span>
+          <h2>Stack principais</h2>
+          <p class="subtitle">
+            Essas são as principais tecnologias e ferramentas que possuo
+            conhecimento para desenvolver aplicações web.
+          </p>
+        </header>
       </div>
-      <div class="flex infinite-scroll max-width">
-        <ul class="flex">
-
+      <div class="infinite-scroll max-width">
+        <ul>
+          <!-- Os itens são inseridos aqui via JavaScript (InfiniteSlider.js) -->
         </ul>
       </div>
     </div>
     <!-- Fim da Skills -->
 
     <!-- Sobre mim -->
-    <div id="about" class="page flex">
-      <article class="flex max-width">
-        <div class="container-about flex">
-          <div>
-            <h2>Sobre mim</h2>
-          </div>
-          <span class="line"></span>
-          <div class="flex children-container">
-            <div class="flex content-about">
-              <p class="hidden-element text-about">
-                Prazer, me chamo Ruan Signori, sou um desenvolvedor FullStack.
-                Tenho 18 anos e moro em Roca Sales - Rio Grande do Sul.
-                Atualmente estou estudando programação, e aprimorando minhas
-                habilidades com infraestrutura de redes (DevOps).
-              </p>
-              <p class="hidden-element text-about">
-                Inicie meus estudos em Maio de 2021, acompanhando cursos
-                gratuitos do Curso em Vídeo do professor Gustavo Guanabara. Isso
-                foi uma porta de entrada para eu dar meus primeiros passos na
-                programação.
-              </p>
-            </div>
-            <div class="flex content-about">
-              <p class="hidden-element text-about">
-                Em Julho do mesmo ano, comprei o curso de "JavaScript e
-                TypeScript do básico ao avançado" do professor Luiz Otávio
-                Miranda na plataforma da Udemy.
-              </p>
-              <p class="hidden-element text-about">
-                Desde aquela época, realizei diversos projetos, e passei por
-                inúmeros desafios. Mas amo fazer o que faço. E sigo trilhando
-                minha jornada como "dev", me dedicando 100% em cada projeto.
-              </p>
-            </div>
-          </div>
-        </div>
-      </article>
+    <div id="about" class="page">
+      <div class="container about-grid">
+        <header class="section-header">
+          <span class="eyebrow">sobre</span>
+          <h2>Sobre mim</h2>
+          <p class="subtitle">Um pouco da minha trajetória na programação até aqui.</p>
+        </header>
+        <ol class="about-timeline">
+          <li class="hidden-element">
+            <span class="about-date">Hoje</span>
+            <p class="text-about">
+              Prazer, me chamo Ruan Signori, sou um desenvolvedor FullStack.
+              Tenho 18 anos e moro em Roca Sales - Rio Grande do Sul.
+              Atualmente estou estudando programação, e aprimorando minhas
+              habilidades com infraestrutura de redes (DevOps).
+            </p>
+          </li>
+          <li class="hidden-element">
+            <span class="about-date">Maio de 2021</span>
+            <p class="text-about">
+              Inicie meus estudos em Maio de 2021, acompanhando cursos
+              gratuitos do Curso em Vídeo do professor Gustavo Guanabara. Isso
+              foi uma porta de entrada para eu dar meus primeiros passos na
+              programação.
+            </p>
+          </li>
+          <li class="hidden-element">
+            <span class="about-date">Julho de 2021</span>
+            <p class="text-about">
+              Em Julho do mesmo ano, comprei o curso de "JavaScript e
+              TypeScript do básico ao avançado" do professor Luiz Otávio
+              Miranda na plataforma da Udemy.
+            </p>
+          </li>
+          <li class="hidden-element">
+            <span class="about-date">Desde então</span>
+            <p class="text-about">
+              Desde aquela época, realizei diversos projetos, e passei por
+              inúmeros desafios. Mas amo fazer o que faço. E sigo trilhando
+              minha jornada como "dev", me dedicando 100% em cada projeto.
+            </p>
+          </li>
+        </ol>
+      </div>
     </div>
     <!-- Fim do Sobre mim -->
 
-    <!-- Minhas Experiências -->
-    <div id="experience" class="page flex">
-      <div class="flex container-timeline">
-        <h2>Experiência</h2>
-        
+    <!-- Minhas Experiências (desativada enquanto não houver conteúdo) -->
+    <!--
+    <div id="experience" class="page">
+      <div class="container">
+        <header class="section-header">
+          <span class="eyebrow">experiência</span>
+          <h2>Experiência</h2>
+        </header>
+        <ul class="timeline"></ul>
       </div>
-      
     </div>
+    -->
     <!-- Fim da sessão sobre Minhas Experiências-->
 
     <!-- Projetos -->
-    <div id="projects" class="page flex content-projects">
-      <section class="flex max-width">
-        <div>
+    <div id="projects" class="page page-alt">
+      <section class="container">
+        <header class="section-header">
+          <span class="eyebrow">projetos</span>
           <h2>Projetos</h2>
-          <p class="subtitle lh-28">Essas são as principais tecnologias e ferramentas que possuo conhecimento
-            para desenvolver aplicações web.</p>
+          <p class="subtitle">
+            Alguns dos projetos que desenvolvi ao longo da minha jornada,
+            do front end ao back end.
+          </p>
+        </header>
+        <div class="container-cards">
+          <!--Os cards são inseridos aqui dentro via JavaScript (InsertContentCard.js)-->
         </div>
-        <div class="parent-container-cards">
-          <div class="container-cards ">
-            <!--Os cards são inseridos aqui dentro via JavaScript (InsertContentCard.js)-->
-          </div>
+        <div class="projects-footer">
+          <a href="https://github.com/ruanSignori?tab=repositories" class="btn btn-secondary" target="_blank" rel="noopener">
+            Ver todos os repositórios no GitHub
+            <i class="ph-bold ph-arrow-up-right"></i>
+          </a>
         </div>
-        <a href="https://github.com/ruanSignori?tab=repositories" class="btn btn-secondary" target="_blank">Repositórios no GitHub</a>
       </section>
     </div>
     <!-- Fim dos Projetos -->
 
     <!-- Contato -->
-    <div id="contact" class="page flex">
-      <section class="max-width">
-        <h2>Entre em contato</h2>
-        <div class="content-contact flex ">
-          <div class="contact-me flex hidden-element">
+    <div id="contact" class="page">
+      <section class="container">
+        <header class="section-header">
+          <span class="eyebrow">contato</span>
+          <h2>Entre em contato</h2>
+          <p class="subtitle">
+            Gostaria de conversar diretamente comigo? Me envie um e-mail pelo
+            formulário abaixo ou me encontre nas redes sociais.
+          </p>
+        </header>
+        <div class="content-contact">
+          <form
+            action="https://formspree.io/f/xpzbyryw"
+            method="post"
+            class="contact-card hidden-element"
+          >
+            <div class="input-field">
+              <label for="email" id="labelEmail">E-mail</label>
+              <input type="email" name="_replyto" id="email" required placeholder="exemplo@exemplo.com"/>
+            </div>
+            <div class="input-field">
+              <label for="message">Mensagem</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="7"
+                placeholder="Digite aqui a sua mensagem..."
+              ></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Enviar
+              <i class="ph-bold ph-paper-plane-tilt"></i>
+            </button>
+          </form>
+
+          <aside class="contact-aside hidden-element">
+            <!-- Animação de contato -->
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module" defer></script>
+            <dotlottie-player src="https://lottie.host/a1754b33-76d3-4358-a503-e2fb3a3d97f3/kdGg43hC4C.json" background="transparent" speed="1" loop autoplay></dotlottie-player>
+
             <div class="social-media">
               <p>Redes sociais</p>
               <div class="row-social-cards">
@@ -320,64 +371,32 @@
                 </a>
               </div>
             </div>
-
-            <div class="container-form-contact flex hidden-element">
-              <div>
-                <p>Gostaria de conversar diretamente comigo?</p>
-                <p>Entre em contato através de e-mail.</p>
-              </div>
-              <form
-                action="https://formspree.io/f/xpzbyryw"
-                method="post"
-                class="flex"
-              >
-                <div class="input-field flex">
-                  <label for="email" id="labelEmail"
-                  >E-mail</label
-                  >
-                  <input type="email" name="_replyto" id="email" required placeholder="exemplo@exemplo.com"/>
-                </div>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="7"
-                  placeholder="Digite aqui a sua mensagem..."
-                ></textarea>
-                
-                <button class="btn btn-primary" type="submit">Enviar</button>
-              </form>
-            </div>
-         </div>
-
-        <!-- Animação de contato -->
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module" defer></script> 
-        <dotlottie-player src="https://lottie.host/a1754b33-76d3-4358-a503-e2fb3a3d97f3/kdGg43hC4C.json" background="transparent" speed="1" style="width: 350px; height: 350px;" loop autoplay></dotlottie-player>
-      </div>
+          </aside>
+        </div>
       </section>
     </div>
     <!-- Fim do Contato -->
 
     <!-- Footer -->
     <footer>
-      <div class="max-width flex content-footer">
-        <div class="flex logo-footer">
+      <div class="container content-footer">
+        <div class="logo-footer">
           <img
             src="/images/logo-details.webp"
             alt="Ruan Signori Logo"
-            height="50"
+            height="40"
             loading="lazy"
           />
-          <p class="subtitle">Ruan Signori</p>
+          <p>Ruan Signori</p>
         </div>
 
-        <p><a href="https://ruansignori.tech" target="_self" rel="noopener">&copy;ruansignori.tech 2025</a></p>
+        <p><a href="https://ruansignori.tech" target="_self" rel="noopener">&copy; ruansignori.tech 2025</a></p>
       </div>
     </footer>
     <!-- Fim do Footer -->
 
     <!-- Botão subir para o topo -->
-    <a href="#home" target="_self" class="btn scroll-to-top" title="Subir para o topo">
+    <a href="#home" target="_self" class="btn scroll-to-top" title="Subir para o topo" aria-label="Subir para o topo">
       <i class="ph-bold ph-arrow-up"></i>
     </a>
     <!-- Fim do botão subir para o topo -->

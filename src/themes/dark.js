@@ -3,4 +3,5 @@ export const darkTheme = {
   "--bg-secondary": "#2F2F2F",
   "--text-primary": "#E1E1E1",
   "--text-secondary": "#979797",
+  "--accent-text": "#00DDB3",
 };

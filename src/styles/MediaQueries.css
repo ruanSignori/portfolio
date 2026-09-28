@@ -1,3 +1,8 @@
+/*
+ * Regras responsivas globais e da Navbar.
+ * As regras específicas de cada seção ficam no próprio arquivo da seção.
+ */
+
 @media (prefers-reduced-motion) {
   .hidden-element {
     transition: none;
@@ -40,176 +45,28 @@
   nav button.menu {
     display: block;
   }
-
-  #projects {
-    padding: 3rem 0.8rem;
-  }
-
-  .page#projects > section > .container-projects {
-    flex-basis: calc(50% - 20px);
-  }
-
-  #contact > section {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: flex-start;
-    align-items: center;
-  }
-
-  #contact > section > div:first-child {
-    margin: 0;
-  }
-
-  #contact > section > div:last-child {
-    margin: 0;
-  }
-
-  #contact > section .container-social-cards > h2 {
-    margin: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  #home .content-presentation .title {
-    font-size: 3.5em;
-    line-height: 72px;
-  }
 }
 
 @media (max-width: 1024px) {
   .page > nav {
     padding: 2rem 2rem;
   }
-
-  h2 {
-    font-size: 2em;
-  }
-
-  #home .content-presentation .title {
-    font-size: 2.5em;
-    line-height: 56px;
-  }
 }
 
 @media (max-width: 800px) {
-  .page {
-    padding: 0 2rem 8rem 2rem !important;
-  }
-
   .page > nav > div > .context-switch {
     width: 15rem;
-  }
-
-  .page#about {
-    gap: 5rem;
-  }
-
-  .page > article > .container-about > .children-container {
-    gap: 2rem;
-  }
-
-  .page > article > .container-about > .children-container > .content-about {
-    align-items: flex-start !important;
-  }
-
-  #contact > section > .container-form-contact > form > textarea {
-    max-width: 26rem;
-  }
-
-  #projects .parent-container-cards {
-    overflow: hidden;
-    max-width: calc(100vw - 2rem);
-  }
-
-  #projects .parent-container-cards .container-cards {
-    overflow-x: scroll;
-    padding-block: 1.5rem;
-    display: flex;
-    gap: 2rem;
-  }
-
-  #projects .parent-container-cards .container-cards .card-project {
-    min-width: 380px;
-  }
-
-  footer {
-    flex-direction: column;
-    gap: 1.8rem;
   }
 }
 
 @media (max-width: 550px) {
   .toast {
     margin: 0 auto;
-    inset: 1rem 0 0 0;
+    inset: var(--space-4) var(--space-4) auto var(--space-4);
   }
 
-  section.container {
-    margin-top: 8rem;
-  }
-
-  section.container .content-presentation {
-    align-items: flex-start;
-  }
-
-  #home .content-presentation .title {
-    text-align: left;
-  }
-
-  section.container .subtitle {
-    font-size: 1em;
-    text-align: left;
-  }
-
-  section.container .group-buttons {
-    width: 100%;
-  }
-
-  section.container .group-buttons a, section.container .group-buttons .btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .page > article > .container-about .line {
-    width: 15rem;
-  }
-
-  #projects .parent-container-cards .container-cards .card-project {
-    padding: 0 0.8rem;
-    min-width: 350px;
-  }
-
-  #contact > section > .container-form-contact > form > .input-field label {
-    font-size: 0.7em;
-  }
-
-  #contact
-    > section
-    > .container-form-contact
-    > form
-    > .input-field
-    input:valid
-    ~ label,
-  #contact
-    > section
-    > .container-form-contact
-    > form
-    > .input-field
-    input:focus
-    ~ label {
-    transform: translate(-11px, -17px);
-    font-size: 0.5em;
-  }
-
-  #contact > section > .container-form-contact > form > .input-field input {
-    width: 15rem;
-  }
-
-  #contact > section > .container-form-contact > form > textarea {
-    width: 18rem;
-  }
-
-  h2 {
-    text-align: left !important;
+  .scroll-to-top {
+    right: var(--space-4);
+    bottom: var(--space-4);
   }
 }

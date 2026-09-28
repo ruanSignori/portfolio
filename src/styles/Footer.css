@@ -1,19 +1,39 @@
 footer {
-  min-height: 10vh;
   border-top: 1px solid var(--bg-secondary);
   background-color: var(--bg-primary);
-  padding: 2rem 2rem;
+  padding-block: var(--space-8);
 }
 
 footer .content-footer {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
-footer .content-footer .logo-footer {
-  gap: 12px;
+footer .logo-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
-footer a , footer a:visited {
-  text-decoration: underline;
+footer .logo-footer p {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+footer p,
+footer a,
+footer a:visited {
+  font-size: var(--fs-sm);
   color: var(--text-secondary);
+}
+
+footer a {
+  transition: color var(--transition);
+}
+
+footer a:hover {
+  color: var(--main-color);
 }

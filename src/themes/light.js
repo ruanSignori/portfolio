@@ -3,4 +3,5 @@ export const lightTheme = {
   "--bg-secondary": "#D9DADC",
   "--text-primary": "#1A1A1A",
   "--text-secondary": "#2F2F2F",
+  "--accent-text": "#00997C",
 };
