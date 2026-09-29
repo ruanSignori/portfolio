@@ -14,6 +14,7 @@ import "./components/ProjectCard";
 import "./HandleSubmit";
 import "./LazyLottie";
 import "./Analytics";
+import "./CurrentYear";
 import "../styles/index.css";
 
 new HandleResponsiveNavbar().observer();
