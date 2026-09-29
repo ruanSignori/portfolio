@@ -85,6 +85,7 @@
 }
 
 #contact dotlottie-player {
+  display: block; /* Reserva o espaço antes do player (carregado sob demanda) ser definido */
   width: 100%;
   max-width: 320px;
   aspect-ratio: 1 / 1;

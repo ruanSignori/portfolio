@@ -4,16 +4,26 @@ import thumb_regtech from "/images/thumb/regtech.webp";
 import thumb_crud_usuarios from "/images/thumb/crud-usuarios.webp";
 import thumb_leitor_csv from "/images/thumb/leitor-csv.webp";
 
+import nodejsIcon from "../assets/icons/nodejs-plain-wordmark.svg?raw";
+import reactIcon from "../assets/icons/react-original.svg?raw";
+import javascriptIcon from "../assets/icons/javascript-plain.svg?raw";
+import typescriptIcon from "../assets/icons/typescript-plain.svg?raw";
+import firebaseIcon from "../assets/icons/firebase-plain-wordmark.svg?raw";
+import mongodbIcon from "../assets/icons/mongodb-plain-wordmark.svg?raw";
+
+
+/**
+ * Ícones das tecnologias (SVG inline, com as cores originais de cada marca)
+ */
+const tool = (name, svg) => `<i class="icon" title="${name}" role="img" aria-label="${name}">${svg}</i>`;
 
 const tools = {
-  'NodeJs': '<i class="devicon-nodejs-plain-wordmark colored"></i>',
-  'NextJs': '<i class="devicon-nextjs-plain colored"></i>',
-  'React': '<i class="devicon-react-original colored"></i>',
-  'JavaScript': '<i class="devicon-javascript-plain colored"></i>',
-  'TypeScript': '<i class="devicon-typescript-plain colored"></i>',
-  'Firebase': '<i class="devicon-firebase-plain-wordmark colored"></i>',
-  'MongoDb': '<i class="devicon-mongodb-plain-wordmark colored"></i>',
-  'TailwindCss': '<i class="devicon-tailwindcss-original colored"></i>'
+  'NodeJs': tool('Node.js', nodejsIcon),
+  'React': tool('React', reactIcon),
+  'JavaScript': tool('JavaScript', javascriptIcon),
+  'TypeScript': tool('TypeScript', typescriptIcon),
+  'Firebase': tool('Firebase', firebaseIcon),
+  'MongoDb': tool('MongoDB', mongodbIcon)
 }
 
 /**

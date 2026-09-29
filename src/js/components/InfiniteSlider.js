@@ -22,11 +22,13 @@ export class InfiniteSlider {
      * Monta o html que renderiza os elementos do "Slider Infinito"
      */
     #renderElements() {
-        Object.entries(sliderItems).forEach(([name, iconClass]) => {
+        Object.entries(sliderItems).forEach(([name, iconSvg]) => {
             const listElement = document.createElement('li');
             const iconElement = document.createElement('i');
 
-            iconElement.className = iconClass;
+            iconElement.innerHTML = iconSvg;
+            iconElement.setAttribute('role', 'img');
+            iconElement.setAttribute('aria-label', name);
             listElement.title = name;
             listElement.appendChild(iconElement);
             this.sliderElement.appendChild(listElement);
