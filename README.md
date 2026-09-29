@@ -4,7 +4,7 @@
 
 ![Resultado final do projeto](https://repository-images.githubusercontent.com/540972780/537df543-7337-4b17-b23d-9212db9960b9)
 
-<h4><a href="https://ruansignori.tech">Clique para visualizar o projeto</a></h4>
+<h4><a href="https://ruansignori.github.io/portfolio/">Clique para visualizar o projeto</a></h4>
 
 ---
 

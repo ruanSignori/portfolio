@@ -59,6 +59,7 @@ nav .context-switch label.change-color {
   padding: 0.3rem;
   position: relative;
   justify-content: space-between;
+  transition: background-color var(--transition);
 
   user-select: none;
 }
@@ -113,7 +114,7 @@ button.menu {
   border-radius: 0.3rem;
   background-color: transparent;
   color: var(--text-secondary);
-  transition: background-color, ease 0.3s;
+  transition: background-color var(--transition), outline-color var(--transition);
 }
 
 button.menu:hover {
