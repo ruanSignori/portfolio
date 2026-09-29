@@ -1,3 +1,6 @@
+import githubIcon from "../../assets/icons/github-logo.svg?raw";
+import arrowUpRightIcon from "../../assets/icons/arrow-up-right.svg?raw";
+
 export class CreateProjectCard {
   constructor(
     /**
@@ -51,7 +54,7 @@ export class CreateProjectCard {
     const siteLink = this.siteProject !== null
       ? `
         <a href="${this.siteProject}" title="Site do projeto" aria-label="Site do projeto ${this.title}" target="_blank" rel="noopener">
-          <i class="ph-bold ph-arrow-up-right"></i>
+          <i class="icon" aria-hidden="true">${arrowUpRightIcon}</i>
         </a>
       `
       : '';
@@ -66,7 +69,7 @@ export class CreateProjectCard {
             <span class="category-project" title="Categoria do projeto">${this.category}</span>
             <div class="project-links">
               <a href="${this.linkRepo}" title="Código fonte do projeto" aria-label="Código fonte do projeto ${this.title}" target="_blank" rel="noopener">
-                <i class="ph-bold ph-github-logo"></i>
+                <i class="icon" aria-hidden="true">${githubIcon}</i>
               </a>
               ${siteLink}
             </div>

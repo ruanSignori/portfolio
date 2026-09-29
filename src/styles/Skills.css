@@ -44,6 +44,16 @@
   transition: color var(--transition), border-color var(--transition), transform var(--transition);
 }
 
+/* Os ícones do slider são monocromáticos: seguem a cor do texto */
+#skills ul li i svg {
+  width: 1em;
+  height: 1em;
+}
+
+#skills ul li i svg * {
+  fill: currentColor;
+}
+
 #skills ul li i:hover {
   color: var(--main-color);
   border-color: var(--main-color);

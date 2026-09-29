@@ -1,5 +1,9 @@
-import "@phosphor-icons/web/bold";
-import "devicon";
+// Fontes hospedadas junto com o site (apenas o subconjunto "latin" e os pesos utilizados)
+import "@fontsource/ubuntu/latin-400";
+import "@fontsource/ubuntu/latin-500";
+import "@fontsource/ubuntu/latin-700";
+import "@fontsource/jetbrains-mono/latin-400";
+import "@fontsource/jetbrains-mono/latin-500";
 
 import "./ChangeTheme";
 import { HandleResponsiveNavbar } from "./ResponsiveNavbar";
@@ -8,6 +12,8 @@ import "./InsertContentCard";
 import { InfiniteSlider } from "./components/InfiniteSlider";
 import "./components/ProjectCard";
 import "./HandleSubmit";
+import "./LazyLottie";
+import "./Analytics";
 import "../styles/index.css";
 
 new HandleResponsiveNavbar().observer();
