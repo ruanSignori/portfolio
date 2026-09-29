@@ -8,6 +8,7 @@ import postgresqlIcon from "../assets/icons/postgresql-plain-wordmark.svg?raw";
 import javascriptIcon from "../assets/icons/javascript-plain.svg?raw";
 import laravelIcon from "../assets/icons/laravel-original-wordmark.svg?raw";
 import dockerIcon from "../assets/icons/docker-plain-wordmark.svg?raw";
+import claudeCodeIcon from "../assets/icons/claudecode-plain.svg?raw";
 
 /**
  * "Dicionário" de tecnologia com seus respectivos ícones (SVG) para serem aplicados em tela dinamicamente
@@ -24,5 +25,6 @@ export const sliderItems = {
     'PostgreSQL': postgresqlIcon,
     'JavaScript': javascriptIcon,
     'Laravel': laravelIcon,
-    'Docker': dockerIcon
+    'Docker': dockerIcon,
+    'Claude Code': claudeCodeIcon
 }
